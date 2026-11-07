@@ -4,7 +4,7 @@ Web estàtica de Mindfulness Sensible al Trauma (Aleix Boronat i Anna Viñas): s
 
 Fet amb el mateix sistema que espiralosona.com (repositori `lespiral/espiralosona`). Es publica amb GitHub Pages des de la carpeta `docs/`.
 
-Estat (7 de novembre de 2026): web sencera amb l'estil de la maqueta de l'Aleix (Lora + Inter, verd sàlvia, fons crema, formes orgàniques) i l'estructura d'espiralosona; falten les 4 imatges d'IA. Fora dels cercadors (`noindex` i `robots.txt` amb Disallow), a https://lespiral.github.io/mindfulnesssensiblealtrauma/. El domini mindfulnesssensiblealtrauma.com encara no hi apunta.
+Estat (7 de novembre de 2026): web sencera amb l'estil de la maqueta de l'Aleix (Lora + Inter, verd sàlvia, fons crema, formes orgàniques) i l'estructura d'espiralosona; falten les 4 imatges d'IA. Fora dels cercadors (`noindex` i `robots.txt` amb Disallow), a https://mindfulnesssensiblealtrauma.com/ (DNS canviats el 7/11/2026 a SWPanel).
 
 El seguiment de la feina és al document del projecte de Claude `claude/pla-de-treball.md`.
 
@@ -91,5 +91,5 @@ Els enllaços legals del peu porten a les pàgines de lespiral.cat (com a espira
 ## Publicació
 
 - GitHub Pages, branca `main`, carpeta `/docs`.
-- L'adreça i si surt als cercadors són a `data/site.json`, a `publish`. Ara: `https://lespiral.github.io/mindfulnesssensiblealtrauma/` i `"index": false`.
-- Per passar al domini (quan l'Aleix digui que sí): apuntar abans tota la zona DNS al pla de treball; fitxer `CNAME` amb `mindfulnesssensiblealtrauma.com`; `publish` a `https://mindfulnesssensiblealtrauma.com/` i `"index": true`; DNS: A `@` a 185.199.108.153, 185.199.109.153, 185.199.110.153 i 185.199.111.153, i CNAME `www` → `lespiral.github.io`. El correu (MX) no es toca. Després, «Enforce HTTPS» i Search Console.
+- L'adreça i si surt als cercadors són a `data/site.json`, a `publish`. Ara: `https://mindfulnesssensiblealtrauma.com/` i `"index": false` (fins que hi hagi HTTPS).
+- Domini (7/11/2026): registrat a SW Hosting (SWPanel → servei «Hosting Redirect Free» del domini → Gestió de DNS). Fitxer `CNAME` amb `mindfulnesssensiblealtrauma.com`; DNS: A `@` a 185.199.108.153, 185.199.109.153, 185.199.110.153 i 185.199.111.153, i CNAME `www` → `lespiral.github.io`. No hi ha correu al domini. Quan hi hagi certificat: «Enforce HTTPS», `"index": true` (treu el noindex, robots Allow i sitemap) i Search Console amb un TXT de verificació (no esborrar-lo mai).

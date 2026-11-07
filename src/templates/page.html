@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% from "parts.html" import page_head, section with context %}
+{% block content %}
+{# Una pàgina de data/pages/<adreça>.json: capçalera (kicker, title, lead, sub, image, buttons) i seccions #}
+{{ page_head(page, root) }}
+{% for s in page.sections %}{{ section(s, root) }}{% endfor %}
+{% endblock %}

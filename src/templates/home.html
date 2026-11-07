@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% from "parts.html" import section, button, img with context %}
+{% block content %}
+{# La portada: la capçalera ("home" a data/site.json: kicker, title, lead, actions, image) i les seves seccions. #}
+{% set p = pic(h.image) if h.image else None %}
+<section class="hero">
+  <div class="wrap hero__in">
+    <div class="hero__text reveal">
+      {% if h.kicker %}<p class="hero__kicker">{{ h.kicker }}</p>{% endif %}
+      <h1 class="hero__title">{{ h.title }}</h1>
+      {% if h.lead %}<p class="hero__lead">{{ h.lead|bold }}</p>{% endif %}
+      {% if h.actions %}<p class="actions actions--left">{% for b in h.actions %}{{ button(b, root, 'btn--light' if loop.first else 'btn--ghost-light') }}{% endfor %}</p>{% endif %}
+      {% if h.note %}<p class="hero__note">{{ h.note }}</p>{% endif %}
+    </div>
+    {% if h.image %}<div class="hero__media reveal">{{ img(h.image, h.alt or '', '45') }}</div>{% endif %}
+  </div>
+</section>
+{% for s in h.sections %}{{ section(s, root) }}{% endfor %}
+{% endblock %}

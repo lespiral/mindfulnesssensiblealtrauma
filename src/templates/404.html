@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% from "parts.html" import page_head with context %}
+{% block content %}
+{{ page_head({"title": "No hemos encontrado esta página", "lead": "Quizá la dirección ha cambiado. Puedes volver al inicio."}, root) }}
+<section class="band band--white"><div class="wrap wrap--narrow"><p class="actions"><a class="btn btn--primary" href="{{ root }}">Volver al inicio</a></p></div></section>
+{% endblock %}

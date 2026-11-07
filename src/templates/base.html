@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {# «js»: els blocs poden aparèixer suaument (src/site.js). Si site.js no arriba a carregar, al cap de 4 s es treu i tot es veu quiet. #}
+  <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.msatMoviment)document.documentElement.classList.remove("js")},4000)</script>
+  <title>{% if page_title %}{{ page_title }} · {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ page_description or site.description }}">
+  {% if noindex %}<meta name="robots" content="noindex">{% endif %}
+  {% if canonical %}<link rel="canonical" href="{{ canonical }}">
+  <meta property="og:url" content="{{ canonical }}">{% endif %}
+  <meta property="og:title" content="{{ page_title or site.name }}">
+  <meta property="og:description" content="{{ page_description or site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  {% if logo %}<meta property="og:image" content="{{ site.publish.url }}assets/img/logo-512.png">{% endif %}
+  {% if favicon %}<link rel="icon" type="image/png" sizes="48x48" href="{{ aroot }}assets/img/favicon-48.png"><link rel="apple-touch-icon" href="{{ aroot }}assets/img/apple-touch-icon.png">{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap">
+  <link rel="stylesheet" href="{{ aroot }}assets/site.css?v={{ version }}">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__in">
+      <a class="brand" href="{{ root }}" aria-label="{{ site.name }}, inicio">
+        {% if logo %}<img class="brand__logo" src="{{ aroot }}assets/img/logo.png" alt="" width="52" height="52">{% else %}<span class="brand__logo brand__logo--pending" title="Logo pendiente">{{ icon('spiral') }}</span>{% endif %}
+        <span class="brand__text"><span class="brand__name">{{ site.name }}</span><span class="brand__sub">{{ site.tagline }}</span></span>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir el menú" data-label-open="Abrir el menú" data-label-close="Cerrar el menú">
+        <span class="menu-btn__open">{{ icon('menu') }}</span><span class="menu-btn__close">{{ icon('close') }}</span>
+      </button>
+      <nav id="menu" class="menu" aria-label="Menú principal">
+        <ul class="menu__list">
+          {# El menú surt de "nav" a data/site.json. Cada element porta a una pàgina (slug) o a una adreça (href); "children" fa un desplegable. #}
+          {% for n in site.nav %}
+          {% set here = (not n.href and n.slug == section) or (n.children and section in (n.children|map(attribute='slug')|list)) %}
+          <li class="menu__item{% if n.children %} has-sub{% endif %}">
+            <a href="{{ n.href or (root ~ (n.slug ~ '/' if n.slug else '')) }}"{% if here %} aria-current="page"{% endif %}>{{ n.title }}{% if n.children %}{{ icon('caret', 'menu__caret') }}{% endif %}</a>
+            {% if n.children %}
+            <ul class="menu__sub">
+              {% for c in n.children %}<li><a href="{{ c.href or (root ~ c.slug ~ '/') }}"{% if c.slug == section %} aria-current="page"{% endif %}>{{ c.title }}</a></li>{% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+          {% if site.cta %}<li class="menu__cta"><a class="btn btn--primary btn--sm" href="{{ root }}{{ site.cta.slug }}/"{% if site.cta.slug == section %} aria-current="page"{% endif %}>{{ site.cta.text }}</a></li>{% endif %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+{% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <div class="footer__about">
+        <p class="footer__name">{% if logo %}<img src="{{ aroot }}assets/img/logo.png" alt="" width="44" height="44">{% endif %}<span>{{ site.name }}</span></p>
+        {% if site.footer.text %}<p class="footer__text">{{ site.footer.text }}</p>{% endif %}
+        <p class="footer__social">
+          {% for s in site.social %}<a href="{{ s.href }}" rel="noopener" aria-label="{{ s.title }}" title="{{ s.title }}">{{ icon(s.icon) }}</a>{% endfor %}
+        </p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__h">Páginas</p>
+        <ul>{% for n in site.footer.links %}<li><a href="{{ n.href or (root ~ (n.slug ~ '/' if n.slug else '')) }}">{{ n.title }}</a></li>{% endfor %}</ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__h">Contacto</p>
+        <ul class="footer__contact">
+          <li>{{ icon('mail') }}<a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
+          <li>{{ icon('instagram') }}<a href="{{ site.contact.instagram }}" rel="noopener">{{ site.contact.instagram_name }}</a></li>
+          <li>{{ icon('globe') }}<span>{{ site.contact.online }}</span></li>
+        </ul>
+      </div>
+    </div>
+    {% if site.footer.care %}<div class="wrap footer__care"><p>{{ icon('lifebuoy') }}<span>{{ site.footer.care }}</span></p></div>{% endif %}
+    <div class="wrap footer__bottom"><p>{{ site.footer.copyright }}</p>{% if site.footer.legal %}<p class="footer__legal">{% for l in site.footer.legal %}<a href="{{ l.href or (root ~ l.slug ~ '/') }}">{{ l.title }}</a>{% endfor %}</p>{% endif %}</div>
+  </footer>
+
+  <script src="{{ aroot }}assets/site.js?v={{ version }}" defer></script>
+</body>
+</html>

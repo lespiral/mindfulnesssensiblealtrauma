@@ -1,0 +1,8 @@
+{
+  "_": "Imatges noves fetes amb IA (prompts a Flow; l'Aleix les puja al Drive amb el número com a nom). Cada nom → on va: [fitxer de data/, camí dins el JSON]. tools/posa-imatges.py ho aplica.",
+  "01-inicio": [["site.json", "home", "image"]],
+  "02-cuando-meditar-no-calma": [["site.json", "home", "sections", 0, "image"]],
+  "03-mindfulness": [["site.json", "home", "sections", 2, "items", 0, "image"], ["pages/mindfulness-sensible-al-trauma.json", "sections", 0, "image"]],
+  "04-yoga": [["site.json", "home", "sections", 2, "items", 1, "image"], ["pages/yoga-sensible-al-trauma.json", "sections", 0, "image"]],
+  "05-psicoterapia": [["site.json", "home", "sections", 2, "items", 2, "image"], ["pages/psicoterapia.json", "sections", 0, "image"]]
+}

@@ -1,0 +1,33 @@
+{
+  "seo_title": "Reservar una sesión",
+  "description": "Cómo reservar una sesión online de mindfulness, yoga o psicoterapia sensibles al trauma con Aleix Boronat o Anna Viñas.",
+  "kicker": "Reservar",
+  "title": "Pedir una sesión",
+  "lead": "Todas las sesiones son individuales y online, por videollamada.",
+  "sections": [
+    {
+      "type": "contact",
+      "items": [
+        {"icon": "calendar-dots", "title": "Mindfulness con Aleix", "paragraphs": ["**Online · 80 minutos · 95 €**", "Elige día y hora en el calendario."], "buttons": [{"text": "Abrir el calendario", "href": "https://sites.google.com/view/mindfulnesssensiblealtrauma/reservar"}]},
+        {"icon": "mail", "title": "Yoga con Anna", "paragraphs": ["**Online · 60 minutos · 70 €**", "Escríbenos y acordamos el día y la hora."], "buttons": [{"text": "Escríbenos", "href": "mailto:mindfulnesssensiblealtrauma@gmail.com?subject=Yoga%20sensible%20al%20trauma"}]},
+        {"icon": "chat-circle-dots", "title": "Psicoterapia", "paragraphs": ["**Online · 60 minutos · 70 €**", "Cuéntanos en pocas líneas qué buscas. Te orientamos sobre quién puede acompañarte mejor."], "buttons": [{"text": "Escríbenos", "href": "mailto:mindfulnesssensiblealtrauma@gmail.com?subject=Psicoterapia"}]}
+      ]
+    },
+    {
+      "type": "steps",
+      "band": "soft",
+      "title": "Después",
+      "items": [
+        {"title": "Te respondemos", "text": "Por correo, desde mindfulnesssensiblealtrauma@gmail.com."},
+        {"title": "Te informamos", "text": "Te enviaremos todos los detalles para la primera sesión."},
+        {"title": "Nos vemos online", "text": "Por videollamada, desde un lugar donde te sientas a gusto."}
+      ]
+    },
+    {
+      "type": "note",
+      "style": "care",
+      "title": "No somos un servicio de urgencias",
+      "paragraphs": ["Si estás en una situación de urgencia, llama al 112. Si tienes pensamientos de suicidio, puedes llamar al 024: es gratuito y atiende las 24 horas."]
+    }
+  ]
+}

@@ -39,41 +39,41 @@
     "online": "Todas las sesiones son online, por videollamada."
   },
   "booking": {
-    "_": "Les maneres de demanar una sessió, amb els preus (una sola font: surten al bloc fosc de reserva i a /reservar/). L'enllaç del calendari és provisional: la pàgina del Google Sites amb el calendari incrustat; cal canviar-lo per l'enllaç directe de la pàgina de reserves de Google Calendar.",
+    "_": "Les maneres de demanar una sessió, amb els preus (una sola font: surten al bloc fosc de reserva i a /reservar/). Totes per correu (sense calendari, 7/11/2026). Mateix ordre i noms que «Qué ofrecemos».",
     "title": "Cuando quieras empezar",
     "paragraphs": [
-      "Mindfulness con Aleix: elige día y hora en el calendario. Yoga y psicoterapia: escríbenos y acordamos el día y la hora.",
+      "Escríbenos y acordamos el día y la hora.",
       "Te enviaremos por correo todos los detalles para la primera sesión."
     ],
     "options": [
       {
-        "icon": "calendar-dots",
-        "title": "Mindfulness sensible al trauma",
-        "meta": "Con Aleix · Online · 80 minutos · 95 €",
-        "text": "Elige día y hora en el calendario.",
-        "button": {
-          "text": "Abrir el calendario",
-          "href": "https://sites.google.com/view/mindfulnesssensiblealtrauma/reservar"
-        }
-      },
-      {
-        "icon": "flower-lotus",
-        "title": "Yoga sensible al trauma",
-        "meta": "Con Anna · Online · 60 minutos · 70 €",
-        "text": "Escríbenos y acordamos el día y la hora.",
-        "button": {
-          "text": "Escríbenos",
-          "href": "mailto:mindfulnesssensiblealtrauma@gmail.com?subject=Yoga%20sensible%20al%20trauma"
-        }
-      },
-      {
         "icon": "chat-circle-dots",
-        "title": "Psicoterapia humanista",
+        "title": "Psicoterapia Humanista Sensible al Trauma",
         "meta": "Con Aleix y Anna · Online · 60 minutos · 70 €",
         "text": "Cuéntanos en pocas líneas qué buscas. Te orientamos sobre quién puede acompañarte mejor.",
         "button": {
           "text": "Escríbenos",
           "href": "mailto:mindfulnesssensiblealtrauma@gmail.com?subject=Psicoterapia"
+        }
+      },
+      {
+        "icon": "sun",
+        "title": "Mindfulness Sensible al Trauma",
+        "meta": "Con Aleix · Online · 80 minutos · 95 €",
+        "text": "Escríbenos y acordamos el día y la hora.",
+        "button": {
+          "text": "Escríbenos",
+          "href": "mailto:mindfulnesssensiblealtrauma@gmail.com?subject=Mindfulness%20sensible%20al%20trauma"
+        }
+      },
+      {
+        "icon": "flower-lotus",
+        "title": "Yoga Sensible al Trauma",
+        "meta": "Con Anna · Online · 60 minutos · 70 €",
+        "text": "Escríbenos y acordamos el día y la hora.",
+        "button": {
+          "text": "Escríbenos",
+          "href": "mailto:mindfulnesssensiblealtrauma@gmail.com?subject=Yoga%20sensible%20al%20trauma"
         }
       }
     ]
@@ -157,39 +157,6 @@
     ],
     "sections": [
       {
-        "type": "cards",
-        "id": "sesiones",
-        "kicker": "Sesiones individuales",
-        "title": "Qué ofrecemos",
-        "intro": "Tres maneras de acompañarte, todas online, por videollamada. Si no sabes cuál es para ti, escríbenos y te orientamos.",
-        "items": [
-          {
-            "icon": "chat-circle-dots",
-            "title": "Psicoterapia",
-            "subtitle": "Con Aleix Boronat y Anna Viñas",
-            "meta": "Online · 60 minutos · 70 €",
-            "text": "Psicoterapia humanista especializada en trauma: un espacio para elaborar lo vivido con cuidado, a tu ritmo y sin desbordarte.",
-            "href": "psicoterapia"
-          },
-          {
-            "icon": "sun",
-            "title": "Mindfulness",
-            "subtitle": "Con Aleix Boronat",
-            "meta": "Online · 80 minutos · 95 €",
-            "text": "Aprender a regularte y a estar presente sin desbordarte, con prácticas adaptadas a tu historia y a tu momento.",
-            "href": "mindfulness-sensible-al-trauma"
-          },
-          {
-            "icon": "flower-lotus",
-            "title": "Yoga",
-            "subtitle": "Con Anna Viñas",
-            "meta": "Online · 60 minutos · 70 €",
-            "text": "Movimiento y respiración desde la elección y la escucha del cuerpo, para volver a habitarlo con más seguridad.",
-            "href": "yoga-sensible-al-trauma"
-          }
-        ]
-      },
-      {
         "type": "text",
         "kicker": "Qué es",
         "title": "Cuando meditar no calma",
@@ -204,6 +171,39 @@
             "text": "Mindfulness sensible al trauma",
             "href": "mindfulness-sensible-al-trauma",
             "style": "btn--outline"
+          }
+        ]
+      },
+      {
+        "type": "cards",
+        "id": "sesiones",
+        "kicker": "Sesiones individuales",
+        "title": "Qué ofrecemos",
+        "intro": "Tres maneras de acompañarte, todas online, por videollamada. Si no sabes cuál es para ti, escríbenos y te orientamos.",
+        "items": [
+          {
+            "icon": "chat-circle-dots",
+            "title": "Psicoterapia Humanista Sensible al Trauma",
+            "subtitle": "Con Aleix Boronat y Anna Viñas",
+            "meta": "Online · 60 minutos · 70 €",
+            "text": "Un espacio para elaborar lo vivido con cuidado, a tu ritmo y sin desbordarte.",
+            "href": "psicoterapia"
+          },
+          {
+            "icon": "sun",
+            "title": "Mindfulness Sensible al Trauma",
+            "subtitle": "Con Aleix Boronat",
+            "meta": "Online · 80 minutos · 95 €",
+            "text": "Aprender a regularte y a estar presente sin desbordarte, con prácticas adaptadas a tu historia y a tu momento.",
+            "href": "mindfulness-sensible-al-trauma"
+          },
+          {
+            "icon": "flower-lotus",
+            "title": "Yoga Sensible al Trauma",
+            "subtitle": "Con Anna Viñas",
+            "meta": "Online · 60 minutos · 70 €",
+            "text": "Movimiento y respiración desde la elección y la escucha del cuerpo, para volver a habitarlo con más seguridad.",
+            "href": "yoga-sensible-al-trauma"
           }
         ]
       },

@@ -28,7 +28,7 @@ El seguiment de la feina és al document del projecte de Claude `claude/pla-de-t
 
 No s'han d'inventar dades: si en falta alguna, es deixa marcada amb `[PENDENT]`. En generar la web, `build.py` diu quantes marques queden.
 
-Preus i horaris: només els que l'Aleix hagi confirmat. Els horaris no surten a la web (són al calendari de reserves). La web no parla de pagament per avançat ni mostra dades bancàries.
+Preus i horaris: només els que l'Aleix hagi confirmat. Els horaris no surten a la web (les sessions es demanen per correu). La web no parla de pagament per avançat ni mostra dades bancàries.
 
 ## Una pàgina
 

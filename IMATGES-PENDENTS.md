@@ -5,7 +5,3 @@ a `src/img/fotos/` amb el nom de la primera columna i torna a generar la web (`p
 
 | Fitxer | On surt |
 |---|---|
-| `01-cuando-meditar-no-calma.jpg` | / |
-| `02-mindfulness.jpg` | /mindfulness-sensible-al-trauma/ |
-| `03-yoga.jpg` | /yoga-sensible-al-trauma/ |
-| `04-psicoterapia.jpg` | /psicoterapia/ |

@@ -1,37 +1,63 @@
 {
   "seo_title": "Yoga sensible al trauma, con Anna Viñas",
   "description": "Sesiones individuales online de yoga sensible al trauma con Anna Viñas: movimiento y respiración desde la elección y la escucha del cuerpo. 60 minutos, 70 €.",
-  "kicker": "Con Anna Viñas",
-  "title": "Yoga sensible al trauma",
+  "kicker": "Con Anna Viñas · Online",
+  "title": "Yoga",
+  "title_em": "sensible al trauma",
   "lead": "Movimiento y respiración desde la elección y la escucha del cuerpo, para volver a habitarlo con más seguridad y confianza.",
-  "buttons": [{"text": "Escríbenos", "href": "mailto:mindfulnesssensiblealtrauma@gmail.com"}, {"text": "Cómo reservar", "href": "reservar"}],
+  "buttons": [
+    {
+      "text": "Pedir una sesión",
+      "href": "#reservar"
+    },
+    {
+      "text": "Cómo lo practicamos",
+      "href": "#como-lo-practicamos"
+    }
+  ],
   "sections": [
     {
       "type": "text",
-      "kicker": "Cómo lo practicamos",
-      "title": "Cada propuesta es una invitación",
-      "image": "04-yoga.jpg",
+      "kicker": "Qué es",
+      "title": "Volver a habitar el cuerpo",
+      "image": "03-yoga.jpg",
       "paragraphs": [
-        "Cada propuesta es una invitación, nunca una obligación.",
-        "Tú decides el ritmo, la intensidad y si haces o no cada movimiento.",
-        "Escuchamos lo que el cuerpo necesita ahora, sin forzar."
+        "Un yoga que se adapta a ti: movimiento y respiración desde la elección y la escucha del cuerpo.",
+        "No se trata de llegar a una postura, sino de notar qué sientes y decidir sobre tu propio movimiento."
       ]
     },
     {
-      "type": "list",
-      "band": "soft",
+      "type": "pillars",
+      "panel": true,
+      "id": "como-lo-practicamos",
       "kicker": "En cada sesión",
-      "title": "Cuatro claves",
+      "title": "Cómo lo practicamos",
       "items": [
-        "**Siempre hay elección.** Tú decides cómo, cuánto y si practicas.",
-        "**Seguridad primero.** Practicamos dentro de lo que puedes sostener.",
-        "**El cuerpo como aliado.** Sin forzar, escuchando lo que necesitas.",
-        "**Un recurso, no una cura.** Complementa el tratamiento del trauma, no lo sustituye."
+        {
+          "icon": "hand-heart",
+          "title": "Una invitación",
+          "text": "Cada propuesta es una invitación, nunca una obligación."
+        },
+        {
+          "icon": "compass",
+          "title": "Tú decides",
+          "text": "El ritmo, la intensidad y si haces o no cada movimiento."
+        },
+        {
+          "icon": "leaf",
+          "title": "Sin forzar",
+          "text": "Escuchamos lo que el cuerpo necesita ahora."
+        },
+        {
+          "icon": "lifebuoy",
+          "title": "Seguridad primero",
+          "text": "Practicamos dentro de lo que puedes sostener."
+        }
       ]
     },
     {
       "type": "text",
-      "band": "stone",
+      "band": "white",
       "kicker": "Quién te acompaña",
       "title": "Anna Viñas",
       "image": "anna-vinas.jpg",
@@ -41,13 +67,17 @@
         "Terapeuta Gestalt. Psicoterapia y yoga sensibles al trauma.",
         "Especializada en trauma, con formación en Yoga Sensible al Trauma y en integración y reprocesamiento del trauma (Método Aleceia)."
       ],
-      "buttons": [{"text": "Su formación", "href": "quienes-somos#anna-vinas", "style": "btn--outline"}]
+      "buttons": [
+        {
+          "text": "Su formación",
+          "href": "quienes-somos#anna-vinas",
+          "style": "btn--outline"
+        }
+      ]
     },
     {
-      "type": "cta",
-      "title": "Pedir una sesión",
-      "paragraphs": ["**Online · 60 minutos · 70 €**", "Escríbenos a mindfulnesssensiblealtrauma@gmail.com y acordamos el día y la hora. Te enviaremos por correo todos los detalles para la primera sesión."],
-      "buttons": [{"text": "Escríbenos", "href": "mailto:mindfulnesssensiblealtrauma@gmail.com"}]
+      "type": "booking",
+      "id": "reservar"
     }
   ]
 }

@@ -18,7 +18,7 @@
   {% if favicon %}<link rel="icon" type="image/png" sizes="48x48" href="{{ aroot }}assets/img/favicon-48.png"><link rel="apple-touch-icon" href="{{ aroot }}assets/img/apple-touch-icon.png">{% endif %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
   <link rel="stylesheet" href="{{ aroot }}assets/site.css?v={{ version }}">
 </head>
 <body>
@@ -27,7 +27,7 @@
   <header class="topbar">
     <div class="wrap topbar__in">
       <a class="brand" href="{{ root }}" aria-label="{{ site.name }}, inicio">
-        {% if logo %}<img class="brand__logo" src="{{ aroot }}assets/img/logo.png" alt="" width="52" height="52">{% else %}<span class="brand__logo brand__logo--pending" title="Logo pendiente">{{ icon('spiral') }}</span>{% endif %}
+        {% if logo %}<img class="brand__logo" src="{{ aroot }}assets/img/logo.png" alt="" width="46" height="46">{% else %}<span class="brand__logo brand__logo--pending" title="Logo pendiente">{{ icon('spiral') }}</span>{% endif %}
         <span class="brand__text"><span class="brand__name">{{ site.name }}</span><span class="brand__sub">{{ site.tagline }}</span></span>
       </a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir el menú" data-label-open="Abrir el menú" data-label-close="Cerrar el menú">

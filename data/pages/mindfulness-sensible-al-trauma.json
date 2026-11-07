@@ -1,32 +1,59 @@
 {
   "seo_title": "Mindfulness sensible al trauma, con Aleix Boronat",
   "description": "Sesiones individuales online de mindfulness sensible al trauma con Aleix Boronat: aprender a regularte y a estar presente sin desbordarte. 80 minutos, 95 €.",
-  "kicker": "Con Aleix Boronat",
-  "title": "Mindfulness sensible al trauma",
+  "kicker": "Con Aleix Boronat · Online",
+  "title": "Mindfulness",
+  "title_em": "sensible al trauma",
   "lead": "Aprender a regularte y a estar presente sin desbordarte, con prácticas adaptadas a tu historia y a tu momento.",
-  "buttons": [{"text": "Reservar en el calendario", "href": "reservar"}, {"text": "Escríbenos", "href": "mailto:mindfulnesssensiblealtrauma@gmail.com"}],
+  "buttons": [
+    {
+      "text": "Reservar",
+      "href": "#reservar"
+    },
+    {
+      "text": "Qué es",
+      "href": "#que-es"
+    }
+  ],
   "sections": [
     {
       "type": "text",
+      "id": "que-es",
       "kicker": "Qué es",
       "title": "Una práctica que se adapta a ti",
-      "image": "03-mindfulness.jpg",
+      "image": "02-mindfulness.jpg",
       "paragraphs": [
         "Es una forma de practicar atención plena que tiene en cuenta tu historia, tu cuerpo y tu momento.",
         "A veces, cerrar los ojos y mirar hacia dentro inquieta en lugar de serenar. No es un fallo: lo que sientes al practicar te habla de lo que necesitas ahora.",
-        "Por eso practicamos de otra manera, si te va mejor: con los ojos abiertos, en ratos cortos, apoyando la atención en algo de fuera, como un sonido o lo que ves."
+        "Por eso, si te va mejor, practicamos de otra manera: con los ojos abiertos, en ratos cortos, apoyando la atención en algo de fuera, como un sonido o lo que ves."
       ]
     },
     {
-      "type": "list",
-      "band": "soft",
+      "type": "pillars",
+      "panel": true,
       "kicker": "En cada sesión",
       "title": "Cuatro claves",
       "items": [
-        "**Siempre hay elección.** Tú decides cómo, cuánto y si practicas.",
-        "**Seguridad primero.** Practicamos dentro de lo que puedes sostener.",
-        "**El cuerpo como aliado.** Sin forzar, escuchando lo que necesitas.",
-        "**Un recurso, no una cura.** Complementa el tratamiento del trauma, no lo sustituye."
+        {
+          "icon": "hand-heart",
+          "title": "Siempre hay elección",
+          "text": "Tú decides cómo, cuánto y si practicas."
+        },
+        {
+          "icon": "lifebuoy",
+          "title": "Seguridad primero",
+          "text": "Practicamos dentro de lo que puedes sostener."
+        },
+        {
+          "icon": "leaf",
+          "title": "El cuerpo como aliado",
+          "text": "Sin forzar, escuchando lo que necesitas."
+        },
+        {
+          "icon": "compass",
+          "title": "Un recurso, no una cura",
+          "text": "Complementa el tratamiento del trauma, no lo sustituye."
+        }
       ]
     },
     {
@@ -34,13 +61,21 @@
       "kicker": "Incluido en tus sesiones",
       "title": "Para seguir practicando en casa",
       "items": [
-        {"icon": "headphones", "title": "Tu práctica, grabada", "text": "Grabamos la práctica de la sesión, la editamos y queda a tu disposición para repetirla cuando quieras."},
-        {"icon": "play", "title": "Curso online de 25 sesiones", "text": "Acceso gratuito al curso online de Mindfulness Sensible al Trauma: con tu primera sesión, un mes de acceso; cada nueva sesión suma un mes más."}
+        {
+          "icon": "headphones",
+          "title": "Tu práctica, grabada",
+          "text": "Grabamos la práctica de la sesión, la editamos y queda a tu disposición para repetirla cuando quieras."
+        },
+        {
+          "icon": "play",
+          "title": "Curso online de 25 sesiones",
+          "text": "Acceso gratuito al curso online de Mindfulness Sensible al Trauma: con tu primera sesión, un mes de acceso; cada nueva sesión suma un mes más."
+        }
       ]
     },
     {
       "type": "text",
-      "band": "stone",
+      "band": "white",
       "kicker": "Quién te acompaña",
       "title": "Aleix Boronat",
       "image": "aleix-boronat.jpg",
@@ -50,13 +85,17 @@
         "Terapeuta Gestalt y profesor y mentor de mindfulness.",
         "Formado con Jack Kornfield y Tara Brach. En el mindfulness sensible al trauma sigue la línea de David A. Treleaven y Willoughby Britton."
       ],
-      "buttons": [{"text": "Su formación", "href": "quienes-somos#aleix-boronat", "style": "btn--outline"}]
+      "buttons": [
+        {
+          "text": "Su formación",
+          "href": "quienes-somos#aleix-boronat",
+          "style": "btn--outline"
+        }
+      ]
     },
     {
-      "type": "cta",
-      "title": "Reservar una sesión",
-      "paragraphs": ["**Online · 80 minutos · 95 €**", "Elige día y hora en el calendario. Te enviaremos por correo todos los detalles para la primera sesión."],
-      "buttons": [{"text": "Reservar en el calendario", "href": "reservar"}, {"text": "Escríbenos", "href": "mailto:mindfulnesssensiblealtrauma@gmail.com"}]
+      "type": "booking",
+      "id": "reservar"
     }
   ]
 }

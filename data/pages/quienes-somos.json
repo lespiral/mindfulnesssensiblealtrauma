@@ -2,7 +2,8 @@
   "seo_title": "Quiénes somos: Aleix Boronat y Anna Viñas",
   "description": "Aleix Boronat, terapeuta Gestalt y profesor de mindfulness, y Anna Viñas, terapeuta Gestalt especializada en trauma. Formación y trayectoria.",
   "kicker": "Quiénes somos",
-  "title": "Aleix Boronat y Anna Viñas",
+  "title": "Aleix Boronat",
+  "title_em": "y Anna Viñas",
   "lead": "Dos terapeutas humanistas que acompañan desde la seguridad, el cuerpo y la elección.",
   "sections": [
     {
@@ -18,15 +19,21 @@
             "Formado con Jack Kornfield y Tara Brach. En el mindfulness sensible al trauma sigue la línea de David A. Treleaven y Willoughby Britton."
           ],
           "blocks": [
-            {"h": "Formación", "list": [
-              "Terapia Gestalt (Institut Gestalt de Barcelona, 2014).",
-              "Profesor de mindfulness: Awareness Training Institute, con el Greater Good Science Center de la Universidad de California en Berkeley (2016).",
-              "Psicoterapia integrativa (Programa SAT).",
-              "Profesor de yoga acreditado por Yoga Alliance (formaciones de 200 y 300 horas en Rishikesh, India)."
-            ]},
-            {"h": "Trayectoria", "list": [
-              "Desde 2012, clases y sesiones individuales en L'Espiral, presenciales y online."
-            ]}
+            {
+              "h": "Formación",
+              "list": [
+                "Terapia Gestalt (Institut Gestalt de Barcelona, 2014).",
+                "Profesor de mindfulness: Awareness Training Institute, con el Greater Good Science Center de la Universidad de California en Berkeley (2016).",
+                "Psicoterapia integrativa (Programa SAT).",
+                "Profesor de yoga acreditado por Yoga Alliance (formaciones de 200 y 300 horas en Rishikesh, India)."
+              ]
+            },
+            {
+              "h": "Trayectoria",
+              "list": [
+                "Desde 2012, clases y sesiones individuales en L'Espiral, presenciales y online."
+              ]
+            }
           ]
         },
         {
@@ -39,30 +46,37 @@
             "También ha acompañado durante años el embarazo, el posparto y la crianza."
           ],
           "blocks": [
-            {"h": "Formación", "list": [
-              "Integración y reprocesamiento del trauma, Método Aleceia, niveles I, II y III (2023-2024).",
-              "Yoga Sensible al Trauma (Radika, 2022).",
-              "Posgrado en Gestalt Integrativa con Albert Rams (2021).",
-              "Terapia Gestalt (ETGB, 2012-2016).",
-              "Psicoterapia integrativa (Programa SAT).",
-              "Hatha Vinyasa Yoga (200 horas, 2019-2020).",
-              "Psicología y psicopatología del embarazo, el parto y el posparto (Terra Mater, 2016-2017).",
-              "Psicología (Universidad Isabel I) [PENDENT] ¿terminado en 2025 o en curso?"
-            ]},
-            {"h": "Trayectoria", "list": [
-              "Terapeuta Gestalt en L'Espiral (2017-2025).",
-              "Yoga para el embarazo, el posparto y terapéutico en El Melic (2014-2023)."
-            ]}
+            {
+              "h": "Formación",
+              "list": [
+                "Integración y reprocesamiento del trauma, Método Aleceia, niveles I, II y III (2023-2024).",
+                "Yoga Sensible al Trauma (Radika, 2022).",
+                "Posgrado en Gestalt Integrativa con Albert Rams (2021).",
+                "Terapia Gestalt (ETGB, 2012-2016).",
+                "Psicoterapia integrativa (Programa SAT).",
+                "Hatha Vinyasa Yoga (200 horas, 2019-2020).",
+                "Psicología y psicopatología del embarazo, el parto y el posparto (Terra Mater, 2016-2017)."
+              ]
+            },
+            {
+              "h": "Trayectoria",
+              "list": [
+                "Terapeuta Gestalt en L'Espiral (2017-2025).",
+                "Yoga para el embarazo, el posparto y terapéutico en El Melic (2014-2023)."
+              ]
+            }
           ]
         }
       ]
     },
     {
-      "type": "cta",
-      "band": "soft",
+      "type": "booking",
+      "id": "reservar",
       "title": "¿Hablamos?",
-      "paragraphs": ["Si no sabes qué sesión es para ti, escríbenos en pocas líneas qué buscas. Te orientamos sobre quién puede acompañarte mejor."],
-      "buttons": [{"text": "Escríbenos", "href": "mailto:mindfulnesssensiblealtrauma@gmail.com"}, {"text": "Cómo reservar", "href": "reservar"}]
+      "paragraphs": [
+        "Si no sabes qué sesión es para ti, escríbenos en pocas líneas qué buscas. Te orientamos sobre quién puede acompañarte mejor.",
+        "Te enviaremos por correo todos los detalles para la primera sesión."
+      ]
     }
   ]
 }

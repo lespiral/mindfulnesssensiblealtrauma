@@ -1,31 +1,57 @@
 {
   "seo_title": "Psicoterapia humanista especializada en trauma",
   "description": "Psicoterapia humanista especializada en trauma, online, con Aleix Boronat y Anna Viñas: un acompañamiento que cuida el ritmo, el cuerpo y la seguridad. 60 minutos, 70 €.",
-  "kicker": "Con Aleix Boronat y Anna Viñas",
-  "title": "Psicoterapia humanista especializada en trauma",
+  "kicker": "Con Aleix Boronat y Anna Viñas · Online",
+  "title": "Psicoterapia humanista",
+  "title_em": "especializada en trauma",
   "lead": "Un acompañamiento que cuida el ritmo, el cuerpo y la seguridad.",
-  "buttons": [{"text": "Escríbenos", "href": "mailto:mindfulnesssensiblealtrauma@gmail.com"}, {"text": "Cómo empezar", "href": "#como-empezar"}],
+  "buttons": [
+    {
+      "text": "Pedir una sesión",
+      "href": "#reservar"
+    },
+    {
+      "text": "Cómo empezar",
+      "href": "#como-empezar"
+    }
+  ],
   "sections": [
     {
       "type": "text",
       "kicker": "Qué es",
       "title": "Un espacio para elaborar lo vivido",
-      "image": "05-psicoterapia.jpg",
+      "image": "04-psicoterapia.jpg",
       "paragraphs": [
         "Un espacio terapéutico para elaborar lo vivido con cuidado, a tu ritmo y sin desbordarte.",
         "Desde la psicoterapia humanista: te acompañamos como persona, no como un diagnóstico."
       ]
     },
     {
-      "type": "cards",
-      "band": "soft",
+      "type": "pillars",
+      "panel": true,
       "kicker": "Cómo trabajamos",
-      "title": "Cuatro maneras de cuidar el proceso",
+      "title": "Cuidar el proceso",
       "items": [
-        {"icon": "users", "title": "Una mirada humanista", "text": "Te acompañamos como persona, no como un diagnóstico."},
-        {"icon": "lifebuoy", "title": "Primero, la seguridad", "text": "No hace falta contarlo todo para empezar."},
-        {"icon": "leaf", "title": "A tu ritmo y con el cuerpo", "text": "Nos movemos dentro de lo que puedes sostener."},
-        {"icon": "hand-heart", "title": "Siempre con elección", "text": "Tú decides hasta dónde y cuándo."}
+        {
+          "icon": "users",
+          "title": "Una mirada humanista",
+          "text": "Te acompañamos como persona, no como un diagnóstico."
+        },
+        {
+          "icon": "lifebuoy",
+          "title": "Primero, la seguridad",
+          "text": "No hace falta contarlo todo para empezar."
+        },
+        {
+          "icon": "leaf",
+          "title": "A tu ritmo y con el cuerpo",
+          "text": "Nos movemos dentro de lo que puedes sostener."
+        },
+        {
+          "icon": "hand-heart",
+          "title": "Siempre con elección",
+          "text": "Tú decides hasta dónde y cuándo."
+        }
       ]
     },
     {
@@ -42,15 +68,32 @@
     },
     {
       "type": "team",
-      "band": "stone",
+      "band": "white",
       "kicker": "Quién te acompaña",
       "title": "Aleix Boronat y Anna Viñas",
       "intro": "Los dos nos hemos formado en psicoterapia integrativa (Programa SAT).",
       "items": [
-        {"photo": "aleix-boronat.jpg", "name": "Aleix Boronat", "role": "Terapeuta Gestalt y profesor de mindfulness sensible al trauma"},
-        {"photo": "anna-vinas.jpg", "name": "Anna Viñas", "role": "Terapeuta Gestalt especializada en trauma", "paragraphs": ["Con formación en integración y reprocesamiento del trauma (Método Aleceia) y en Yoga Sensible al Trauma."]}
+        {
+          "photo": "aleix-boronat.jpg",
+          "name": "Aleix Boronat",
+          "role": "Terapeuta Gestalt y profesor de mindfulness sensible al trauma"
+        },
+        {
+          "photo": "anna-vinas.jpg",
+          "name": "Anna Viñas",
+          "role": "Terapeuta Gestalt especializada en trauma",
+          "paragraphs": [
+            "Con formación en integración y reprocesamiento del trauma (Método Aleceia) y en Yoga Sensible al Trauma."
+          ]
+        }
       ],
-      "buttons": [{"text": "Conócenos", "href": "quienes-somos", "style": "btn--outline"}]
+      "buttons": [
+        {
+          "text": "Conócenos",
+          "href": "quienes-somos",
+          "style": "btn--outline"
+        }
+      ]
     },
     {
       "type": "steps",
@@ -58,11 +101,23 @@
       "kicker": "Online · 60 minutos · 70 €",
       "title": "Cómo empezar",
       "items": [
-        {"title": "Escríbenos", "text": "A mindfulnesssensiblealtrauma@gmail.com."},
-        {"title": "Cuéntanos qué buscas", "text": "En pocas líneas. Te orientamos sobre quién puede acompañarte mejor."},
-        {"title": "Acordamos la primera sesión", "text": "Te enviaremos por correo todos los detalles."}
-      ],
-      "buttons": [{"text": "Escríbenos", "href": "mailto:mindfulnesssensiblealtrauma@gmail.com"}]
+        {
+          "title": "Escríbenos",
+          "text": "A mindfulnesssensiblealtrauma@gmail.com."
+        },
+        {
+          "title": "Cuéntanos qué buscas",
+          "text": "En pocas líneas. Te orientamos sobre quién puede acompañarte mejor."
+        },
+        {
+          "title": "Acordamos la primera sesión",
+          "text": "Te enviaremos por correo todos los detalles."
+        }
+      ]
+    },
+    {
+      "type": "booking",
+      "id": "reservar"
     }
   ]
 }

@@ -2,14 +2,35 @@
   "name": "Mindfulness Sensible al Trauma",
   "tagline": "Aleix Boronat · Anna Viñas",
   "description": "Sesiones individuales online de mindfulness, yoga y psicoterapia humanista sensibles al trauma, con Aleix Boronat y Anna Viñas. A tu ritmo y siempre con elección.",
-  "publish": {"url": "https://lespiral.github.io/mindfulnesssensiblealtrauma/", "index": false},
-  "cta": {"text": "Reservar", "slug": "reservar"},
+  "publish": {
+    "url": "https://lespiral.github.io/mindfulnesssensiblealtrauma/",
+    "index": false
+  },
+  "cta": {
+    "text": "Reservar",
+    "slug": "reservar"
+  },
   "nav": [
-    {"slug": "", "title": "Inicio"},
-    {"slug": "mindfulness-sensible-al-trauma", "title": "Mindfulness"},
-    {"slug": "yoga-sensible-al-trauma", "title": "Yoga"},
-    {"slug": "psicoterapia", "title": "Psicoterapia"},
-    {"slug": "quienes-somos", "title": "Quiénes somos"}
+    {
+      "slug": "",
+      "title": "Inicio"
+    },
+    {
+      "slug": "psicoterapia",
+      "title": "Psicoterapia"
+    },
+    {
+      "slug": "mindfulness-sensible-al-trauma",
+      "title": "Mindfulness"
+    },
+    {
+      "slug": "yoga-sensible-al-trauma",
+      "title": "Yoga"
+    },
+    {
+      "slug": "quienes-somos",
+      "title": "Quiénes somos"
+    }
   ],
   "contact": {
     "email": "mindfulnesssensiblealtrauma@gmail.com",
@@ -18,25 +39,101 @@
     "online": "Todas las sesiones son online, por videollamada."
   },
   "booking": {
-    "url": "https://sites.google.com/view/mindfulnesssensiblealtrauma/reservar",
-    "_": "Provisional: la pàgina de reserves del Google Sites (hi ha el calendari incrustat). Canviar-ho per l'enllaç directe de la pàgina de reserves del Google Calendar quan el tinguem."
+    "_": "Les maneres de demanar una sessió, amb els preus (una sola font: surten al bloc fosc de reserva i a /reservar/). L'enllaç del calendari és provisional: la pàgina del Google Sites amb el calendari incrustat; cal canviar-lo per l'enllaç directe de la pàgina de reserves de Google Calendar.",
+    "title": "Cuando quieras empezar",
+    "paragraphs": [
+      "Mindfulness con Aleix: elige día y hora en el calendario. Yoga y psicoterapia: escríbenos y acordamos el día y la hora.",
+      "Te enviaremos por correo todos los detalles para la primera sesión."
+    ],
+    "options": [
+      {
+        "icon": "calendar-dots",
+        "title": "Mindfulness sensible al trauma",
+        "meta": "Con Aleix · Online · 80 minutos · 95 €",
+        "text": "Elige día y hora en el calendario.",
+        "button": {
+          "text": "Abrir el calendario",
+          "href": "https://sites.google.com/view/mindfulnesssensiblealtrauma/reservar"
+        }
+      },
+      {
+        "icon": "flower-lotus",
+        "title": "Yoga sensible al trauma",
+        "meta": "Con Anna · Online · 60 minutos · 70 €",
+        "text": "Escríbenos y acordamos el día y la hora.",
+        "button": {
+          "text": "Escríbenos",
+          "href": "mailto:mindfulnesssensiblealtrauma@gmail.com?subject=Yoga%20sensible%20al%20trauma"
+        }
+      },
+      {
+        "icon": "chat-circle-dots",
+        "title": "Psicoterapia humanista",
+        "meta": "Con Aleix y Anna · Online · 60 minutos · 70 €",
+        "text": "Cuéntanos en pocas líneas qué buscas. Te orientamos sobre quién puede acompañarte mejor.",
+        "button": {
+          "text": "Escríbenos",
+          "href": "mailto:mindfulnesssensiblealtrauma@gmail.com?subject=Psicoterapia"
+        }
+      }
+    ]
   },
   "social": [
-    {"title": "Instagram", "icon": "instagram", "href": "https://www.instagram.com/mindfulnesssensiblealtrauma/"},
-    {"title": "Correo", "icon": "mail", "href": "mailto:mindfulnesssensiblealtrauma@gmail.com"}
+    {
+      "title": "Instagram",
+      "icon": "instagram",
+      "href": "https://www.instagram.com/mindfulnesssensiblealtrauma/"
+    },
+    {
+      "title": "Correo",
+      "icon": "mail",
+      "href": "mailto:mindfulnesssensiblealtrauma@gmail.com"
+    }
   ],
   "footer": {
     "text": "Sesiones individuales online de mindfulness, yoga y psicoterapia humanista sensibles al trauma.",
     "links": [
-      {"slug": "", "title": "Inicio"},
-      {"slug": "mindfulness-sensible-al-trauma", "title": "Mindfulness sensible al trauma"},
-      {"slug": "yoga-sensible-al-trauma", "title": "Yoga sensible al trauma"},
-      {"slug": "psicoterapia", "title": "Psicoterapia"},
-      {"slug": "quienes-somos", "title": "Quiénes somos"},
-      {"slug": "reservar", "title": "Reservar"}
+      {
+        "slug": "",
+        "title": "Inicio"
+      },
+      {
+        "slug": "psicoterapia",
+        "title": "Psicoterapia"
+      },
+      {
+        "slug": "mindfulness-sensible-al-trauma",
+        "title": "Mindfulness sensible al trauma"
+      },
+      {
+        "slug": "yoga-sensible-al-trauma",
+        "title": "Yoga sensible al trauma"
+      },
+      {
+        "slug": "quienes-somos",
+        "title": "Quiénes somos"
+      },
+      {
+        "slug": "reservar",
+        "title": "Reservar"
+      }
     ],
     "care": "No somos un servicio de urgencias. Si estás en una situación de urgencia, llama al 112. Si tienes pensamientos de suicidio, puedes llamar al 024: es gratuito y atiende las 24 horas.",
-    "copyright": "© 2026 Mindfulness Sensible al Trauma · Aleix Boronat y Anna Viñas"
+    "copyright": "© 2026 Mindfulness Sensible al Trauma · Aleix Boronat y Anna Viñas",
+    "legal": [
+      {
+        "title": "Aviso legal",
+        "href": "https://lespiral.cat/aviso-legal/"
+      },
+      {
+        "title": "Política de privacidad",
+        "href": "https://lespiral.cat/politica-de-privacidad/"
+      },
+      {
+        "title": "Política de cookies",
+        "href": "https://lespiral.cat/politica-de-cookies/"
+      }
+    ]
   },
   "redirects": {
     "inicio": ""
@@ -45,72 +142,178 @@
     "seo_title": "Mindfulness, yoga y psicoterapia sensibles al trauma",
     "description": "Sesiones individuales online de mindfulness, yoga y psicoterapia humanista sensibles al trauma, con Aleix Boronat y Anna Viñas. A tu ritmo y siempre con elección.",
     "kicker": "Sesiones individuales · Online",
-    "title": "Mindfulness, yoga y psicoterapia sensibles al trauma",
-    "lead": "Con Aleix Boronat y Anna Viñas. **A tu ritmo y siempre con elección.**",
-    "image": "01-inicio.jpg",
-    "alt": "",
+    "title": "Mindfulness, yoga y psicoterapia",
+    "title_em": "sensibles al trauma",
+    "lead": "Con Aleix Boronat y Anna Viñas. Un acompañamiento que cuida el ritmo, el cuerpo y la seguridad. **A tu ritmo y siempre con elección.**",
     "actions": [
-      {"text": "Pedir una sesión", "href": "reservar"},
-      {"text": "Qué ofrecemos", "href": "#sesiones"}
+      {
+        "text": "Qué ofrecemos",
+        "href": "#sesiones"
+      },
+      {
+        "text": "Pedir una sesión",
+        "href": "#reservar"
+      }
     ],
     "sections": [
-      {
-        "type": "text",
-        "kicker": "Qué es",
-        "title": "Cuando meditar no calma",
-        "image": "02-cuando-meditar-no-calma.jpg",
-        "paragraphs": [
-          "El mindfulness sensible al trauma es una forma de practicar atención plena que se adapta a ti: a tu historia, a tu cuerpo y a tu momento.",
-          "A veces, cerrar los ojos y mirar hacia dentro inquieta en lugar de serenar. No es un fallo. Lo que sientes al practicar te habla de lo que necesitas ahora.",
-          "Se puede practicar de otra manera: con los ojos abiertos, en ratos cortos, apoyando la atención en algo de fuera, como un sonido o lo que ves."
-        ]
-      },
-      {
-        "type": "cards",
-        "band": "soft",
-        "kicker": "Cómo trabajamos",
-        "title": "Cuatro claves",
-        "items": [
-          {"icon": "hand-heart", "title": "Siempre hay elección", "text": "Tú decides cómo, cuánto y si practicas."},
-          {"icon": "lifebuoy", "title": "Seguridad primero", "text": "Practicamos dentro de lo que puedes sostener."},
-          {"icon": "leaf", "title": "El cuerpo como aliado", "text": "Sin forzar, escuchando lo que necesitas."},
-          {"icon": "compass", "title": "Un recurso, no una cura", "text": "Complementa el tratamiento del trauma, no lo sustituye."}
-        ]
-      },
       {
         "type": "cards",
         "id": "sesiones",
         "kicker": "Sesiones individuales",
         "title": "Qué ofrecemos",
-        "intro": "Todas las sesiones son online, por videollamada.",
+        "intro": "Tres maneras de acompañarte, todas online, por videollamada. Si no sabes cuál es para ti, escríbenos y te orientamos.",
         "items": [
-          {"image": "03-mindfulness.jpg", "title": "Mindfulness sensible al trauma", "subtitle": "Con Aleix Boronat", "meta": "Online · 80 minutos · 95 €", "text": "Aprender a regularte y a estar presente sin desbordarte, con prácticas adaptadas a tu historia y a tu momento.", "href": "mindfulness-sensible-al-trauma"},
-          {"image": "04-yoga.jpg", "title": "Yoga sensible al trauma", "subtitle": "Con Anna Viñas", "meta": "Online · 60 minutos · 70 €", "text": "Movimiento y respiración desde la elección y la escucha del cuerpo, para volver a habitarlo con más seguridad.", "href": "yoga-sensible-al-trauma"},
-          {"image": "05-psicoterapia.jpg", "title": "Psicoterapia humanista especializada en trauma", "subtitle": "Con Aleix Boronat y Anna Viñas", "meta": "Online · 60 minutos · 70 €", "text": "Un espacio terapéutico para elaborar lo vivido con cuidado, a tu ritmo y sin desbordarte.", "href": "psicoterapia"}
+          {
+            "icon": "chat-circle-dots",
+            "title": "Psicoterapia",
+            "subtitle": "Con Aleix Boronat y Anna Viñas",
+            "meta": "Online · 60 minutos · 70 €",
+            "text": "Psicoterapia humanista especializada en trauma: un espacio para elaborar lo vivido con cuidado, a tu ritmo y sin desbordarte.",
+            "href": "psicoterapia"
+          },
+          {
+            "icon": "sun",
+            "title": "Mindfulness",
+            "subtitle": "Con Aleix Boronat",
+            "meta": "Online · 80 minutos · 95 €",
+            "text": "Aprender a regularte y a estar presente sin desbordarte, con prácticas adaptadas a tu historia y a tu momento.",
+            "href": "mindfulness-sensible-al-trauma"
+          },
+          {
+            "icon": "flower-lotus",
+            "title": "Yoga",
+            "subtitle": "Con Anna Viñas",
+            "meta": "Online · 60 minutos · 70 €",
+            "text": "Movimiento y respiración desde la elección y la escucha del cuerpo, para volver a habitarlo con más seguridad.",
+            "href": "yoga-sensible-al-trauma"
+          }
         ]
       },
       {
+        "type": "text",
+        "kicker": "Qué es",
+        "title": "Cuando meditar no calma",
+        "image": "01-cuando-meditar-no-calma.jpg",
+        "paragraphs": [
+          "El mindfulness sensible al trauma es una forma de practicar atención plena que se adapta a ti: a tu historia, a tu cuerpo y a tu momento.",
+          "A veces, cerrar los ojos y mirar hacia dentro inquieta en lugar de serenar. No es un fallo. Lo que sientes al practicar te habla de lo que necesitas ahora.",
+          "Se puede practicar de otra manera: con los ojos abiertos, en ratos cortos, apoyando la atención en algo de fuera, como un sonido o lo que ves."
+        ],
+        "buttons": [
+          {
+            "text": "Mindfulness sensible al trauma",
+            "href": "mindfulness-sensible-al-trauma",
+            "style": "btn--outline"
+          }
+        ]
+      },
+      {
+        "type": "pillars",
+        "panel": true,
+        "id": "cuatro-claves",
+        "kicker": "Cómo trabajamos",
+        "title": "Cuatro claves",
+        "intro": "Lo que cuidamos en cada sesión, sea de mindfulness, de yoga o de psicoterapia.",
+        "items": [
+          {
+            "icon": "hand-heart",
+            "title": "Siempre hay elección",
+            "text": "Tú decides cómo, cuánto y si practicas."
+          },
+          {
+            "icon": "lifebuoy",
+            "title": "Seguridad primero",
+            "text": "Practicamos dentro de lo que puedes sostener."
+          },
+          {
+            "icon": "leaf",
+            "title": "El cuerpo como aliado",
+            "text": "Sin forzar, escuchando lo que necesitas."
+          },
+          {
+            "icon": "compass",
+            "title": "Un recurso, no una cura",
+            "text": "Complementa el tratamiento del trauma, no lo sustituye."
+          }
+        ]
+      },
+      {
+        "type": "anchor",
+        "id": "recurso",
+        "kicker": "Un recurso para ti",
+        "title": "Un momento para aterrizar",
+        "paragraphs": [
+          "Si te notas con mucha activación, puedes probar esto aquí mismo, con los ojos abiertos. No hace falta cambiar nada de tu respiración."
+        ],
+        "list": [
+          "Si te resulta cómodo, apoya los pies en el suelo y nota el apoyo de la silla.",
+          "Pulsa «Empezar» y, si te apetece, sigue el círculo con la mirada, sin forzar.",
+          "Para cuando quieras. También puedes mirar alrededor y nombrar tres cosas que veas."
+        ],
+        "note": "Es una invitación, no una obligación. Si en algún momento te incomoda, para y vuelve a mirar a tu alrededor.",
+        "phases": [
+          "Se abre…",
+          "Se cierra…"
+        ],
+        "seconds": 5,
+        "idle": "Cuando quieras",
+        "start": "Empezar",
+        "stop": "Parar"
+      },
+      {
         "type": "team",
-        "band": "stone",
+        "band": "white",
         "kicker": "Quiénes somos",
         "title": "Quién te acompaña",
         "items": [
-          {"photo": "aleix-boronat.jpg", "name": "Aleix Boronat", "role": "Terapeuta Gestalt. Profesor y mentor de mindfulness", "paragraphs": ["Formado con Jack Kornfield y Tara Brach. En el mindfulness sensible al trauma sigue la línea de David A. Treleaven y Willoughby Britton."]},
-          {"photo": "anna-vinas.jpg", "name": "Anna Viñas", "role": "Terapeuta Gestalt. Psicoterapia y yoga sensibles al trauma", "paragraphs": ["Especializada en trauma, con formación en Yoga Sensible al Trauma y en integración y reprocesamiento del trauma (Método Aleceia)."]}
+          {
+            "photo": "aleix-boronat.jpg",
+            "name": "Aleix Boronat",
+            "role": "Terapeuta Gestalt. Profesor y mentor de mindfulness",
+            "paragraphs": [
+              "Formado con Jack Kornfield y Tara Brach. En el mindfulness sensible al trauma sigue la línea de David A. Treleaven y Willoughby Britton."
+            ]
+          },
+          {
+            "photo": "anna-vinas.jpg",
+            "name": "Anna Viñas",
+            "role": "Terapeuta Gestalt. Psicoterapia y yoga sensibles al trauma",
+            "paragraphs": [
+              "Especializada en trauma, con formación en Yoga Sensible al Trauma y en integración y reprocesamiento del trauma (Método Aleceia)."
+            ]
+          }
         ],
-        "buttons": [{"text": "Conócenos", "href": "quienes-somos", "style": "btn--outline"}]
+        "buttons": [
+          {
+            "text": "Conócenos",
+            "href": "quienes-somos",
+            "style": "btn--outline"
+          }
+        ]
       },
       {
-        "type": "steps",
-        "kicker": "Reservar",
-        "title": "Cómo empezar",
-        "items": [
-          {"title": "Elige la sesión", "text": "Mindfulness, yoga o psicoterapia. Si no lo tienes claro, escríbenos y te orientamos."},
-          {"title": "Reserva o escríbenos", "text": "Mindfulness con Aleix: elige día y hora en el calendario. Yoga y psicoterapia: escríbenos por correo."},
-          {"title": "Te informamos", "text": "Te enviaremos por correo todos los detalles para la primera sesión."}
-        ],
-        "buttons": [{"text": "Pedir una sesión", "href": "reservar"}]
+        "type": "instagram",
+        "id": "instagram",
+        "kicker": "En Instagram",
+        "title": "Nuestros carruseles",
+        "intro": "Compartimos carruseles breves sobre mindfulness, yoga y psicoterapia sensibles al trauma.",
+        "buttons": [
+          {
+            "text": "Seguir en Instagram",
+            "href": "https://www.instagram.com/mindfulnesssensiblealtrauma/",
+            "icon": "instagram",
+            "style": "btn--outline"
+          }
+        ]
+      },
+      {
+        "type": "booking",
+        "id": "reservar"
       }
     ]
+  },
+  "instagram": {
+    "_": "Feed automàtic d'Instagram amb Behold (behold.so). Quan l'Aleix hi connecti el compte, posar aquí l'ID del feed (feed_id). Mentre és buit, la secció només mostra el botó cap a Instagram.",
+    "feed_id": ""
   }
 }

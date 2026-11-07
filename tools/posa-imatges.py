@@ -71,10 +71,7 @@ def width_for(name):
 
 
 def ratio_for(name):
-    n = int(name.split("-", 1)[0])
-    if n == 1:
-        return 4 / 5         # la imatge de la portada (vertical)
-    return 4 / 3             # targetes i imatges de dins de les pàgines (les targetes la retallen a 16:9)
+    return 4 / 3             # totes van al costat d'un text, amb forma orgànica
 
 
 def crop_to(im, r):
@@ -97,7 +94,7 @@ def add_files(files):
         src = Path(src)
         m = re.match(r"(\d{2})\D", src.name)
         if not m or m.group(1) not in BY_NUM:
-            print(f"  ? {src.name}: no sé quina imatge és (ha de començar pel número, 01–05)")
+            print(f"  ? {src.name}: no sé quina imatge és (ha de començar pel número, 01–04)")
             continue
         name = BY_NUM[m.group(1)]
         im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")

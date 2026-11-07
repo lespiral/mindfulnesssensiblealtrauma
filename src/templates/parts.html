@@ -1,6 +1,6 @@
 {# Peces que fan servir totes les pàgines. La macro «section» pinta cada secció de data/ segons el seu "type". #}
 
-{# Una imatge: "path" és el nom del fitxer (p. ex. "01-inicio.jpg"). Si encara no és a src/img/fotos/, surt un requadre marcat. #}
+{# Una imatge: "path" és el nom del fitxer (p. ex. "02-mindfulness.jpg"). Si encara no és a src/img/fotos/, surt un requadre marcat. #}
 {% macro img(path, alt='', ratio='', cls='') -%}
 {% set p = pic(path) %}
 {% if p %}
@@ -11,7 +11,12 @@
 {% endif %}
 {%- endmacro %}
 
-{# Una adreça sense http, mailto, tel ni # és una pàgina de la web: "contacte-2" → /contacte-2/, "" → l'inici #}
+{# Les formes orgàniques del fons (portada i capçaleres) #}
+{% macro blobs() -%}
+<div class="blobs" aria-hidden="true"><span class="blob blob--a"></span><span class="blob blob--b"></span><span class="blob blob--c"></span></div>
+{%- endmacro %}
+
+{# Una adreça sense http, mailto, tel ni # és una pàgina de la web: "reservar" → /reservar/, "" → l'inici #}
 {% macro link_href(href, root) -%}
 {%- if href.startswith('http') or href.startswith('mailto:') or href.startswith('tel:') or href.startswith('#') -%}{{ href }}
 {%- else -%}{% set p = href.split('#') %}{{ root }}{{ p[0].strip('/') }}{{ '/' if p[0].strip('/') else '' }}{% if p|length > 1 %}#{{ p[1] }}{% endif %}
@@ -23,18 +28,17 @@
 {% else %}<span class="btn btn--disabled" aria-disabled="true">{{ b.text }}</span>{% endif %}
 {%- endmacro %}
 
-{# Capçalera d'una pàgina: "kicker" (avantítol), "title" (h1), "lead", "sub", "image" (fons) i "buttons" #}
+{# Capçalera d'una pàgina: "kicker" (etiqueta), "title" (h1) + "title_em" (en cursiva), "lead", "sub" i "buttons" #}
 {% macro page_head(page, root) -%}
-{% set p = pic(page.image) if page.image else None %}
-<section class="pagehead{% if p and p.ok %} pagehead--photo{% endif %}"{% if p and p.ok %} style="background-image:url('{{ aroot }}assets/img/{{ p.src }}')"{% endif %}>
+<section class="pagehead">
+  {{ blobs() }}
   <div class="wrap pagehead__in reveal">
-    {% if page.kicker %}<p class="pagehead__kicker">{{ page.kicker }}</p>{% endif %}
-    <h1 class="pagehead__title">{{ page.title }}</h1>
+    {% if page.kicker %}<span class="pill">{{ page.kicker }}</span>{% endif %}
+    <h1 class="pagehead__title">{{ page.title }}{% if page.title_em %} <em>{{ page.title_em }}</em>{% endif %}</h1>
     {% if page.lead %}<p class="pagehead__lead">{{ page.lead }}</p>{% endif %}
     {% if page.sub %}<p class="pagehead__sub">{{ page.sub }}</p>{% endif %}
-    {% if page.buttons %}<p class="actions">{% for b in page.buttons %}{{ button(b, root, 'btn--light' if loop.first else 'btn--ghost-light') }}{% endfor %}</p>{% endif %}
+    {% if page.buttons %}<p class="actions">{% for b in page.buttons %}{{ button(b, root, 'btn--primary' if loop.first else 'btn--outline') }}{% endfor %}</p>{% endif %}
   </div>
-  {% if p and not p.ok %}<span class="pagehead__pending">{{ icon('image') }}Imagen de fondo pendiente: {{ p.name }}</span>{% endif %}
 </section>
 {%- endmacro %}
 
@@ -45,61 +49,62 @@
 </details>
 {%- endmacro %}
 
-{# Targetes: [{"image", "icon", "badge", "title", "subtitle", "lead", "text", "paragraphs", "list", "href", "button", "links"}] #}
+{# Targetes: [{"image", "icon", "title", "subtitle", "meta", "lead", "text", "paragraphs", "list", "href", "button"}] #}
 {% macro cards(s, root) -%}
-{% set n = s.cols or ((s["items"]|length) if (s["items"]|length) in (2, 4) else 3) %}
+{% set n = s.cols or ((s["items"]|length) if (s["items"]|length) in (1, 2, 4) else 3) %}
 <ul class="cards cards--{{ n }}">
   {% for c in s["items"] %}
   <li class="card reveal"{% if c.id %} id="{{ c.id }}"{% endif %}>
     {% if c.image %}{{ img(c.image, c.alt or '', c.ratio or s.ratio or '169', 'card__media') }}{% endif %}
     <div class="card__body">
       {% if c.icon %}<span class="card__icon" aria-hidden="true">{{ icon(c.icon) }}</span>{% endif %}
-      {% if c.badge %}<span class="badge">{{ c.badge }}</span>{% endif %}
       {% if c.title %}<h3 class="card__title">{{ c.title }}</h3>{% endif %}
       {% if c.subtitle %}<p class="card__subtitle">{{ c.subtitle }}</p>{% endif %}
-      {% if c.lead %}<p class="card__lead">{{ c.lead }}</p>{% endif %}
       {% if c.meta %}<p class="card__meta">{{ icon(c.meta_icon or 'clock') }}<span>{{ c.meta }}</span></p>{% endif %}
+      {% if c.lead %}<p class="card__lead">{{ c.lead }}</p>{% endif %}
       {% if c.text %}<p>{{ c.text }}</p>{% endif %}
       {% for p in c.paragraphs or [] %}<p>{{ p }}</p>{% endfor %}
       {% if c.list %}<ul class="ticks">{% for i in c.list %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
       {% if c.href %}<a class="more" href="{{ link_href(c.href, root) }}"{% if c.href.startswith('http') %} rel="noopener"{% endif %}>{{ c.button or 'Más información' }} {{ icon('arrow') }}</a>{% endif %}
-      {% for l in c.links or [] %}<a class="more" href="{{ link_href(l.href, root) }}"{% if l.href.startswith('http') %} rel="noopener"{% endif %}>{{ l.text }} {{ icon('arrow') }}</a>{% endfor %}
     </div>
   </li>
   {% endfor %}
 </ul>
 {%- endmacro %}
 
-{# Una secció de pàgina. Tipus: text, cards, list, faq, note, cta, actions, contact, quote, steps, video, team (vegeu el README). #}
 {# Llista d'articles (data/articles/), del més nou al més antic #}
 {% macro article_cards(list, root) -%}
-<ul class="posts">
+<ul class="cards cards--3">
   {% for a in list %}
-  <li class="post reveal">
-    <a class="post__link" href="{{ root }}{{ a.slug }}/">
-      {% if a.image %}<span class="post__img">{{ img(a.image, '', '169') }}</span>{% endif %}
-      <span class="post__body">
-        <time class="post__date" datetime="{{ a.date }}">{{ a.date_text }}</time>
-        <span class="post__title">{{ a.title }}</span>
-        <span class="post__summary">{{ a.summary }}</span>
-        <span class="post__more">Leer el artículo {{ icon('arrow') }}</span>
-      </span>
-    </a>
-  </li>
+  <li class="card reveal"><div class="card__body"><p class="card__meta">{{ a.date_text }}</p><h3 class="card__title"><a href="{{ root }}{{ a.slug }}/">{{ a.title }}</a></h3><p>{{ a.summary }}</p></div></li>
   {% endfor %}
 </ul>
 {%- endmacro %}
 
+{# Les maneres de demanar una sessió (data/site.json, "booking.options"): una sola font per als preus #}
+{% macro options(list, root) -%}
+{% for o in list %}
+<div class="option">
+  <span class="option__icon" aria-hidden="true">{{ icon(o.icon or 'mail') }}</span>
+  <h3 class="option__title">{{ o.title }}</h3>
+  {% if o.meta %}<p class="option__meta">{{ o.meta }}</p>{% endif %}
+  {% if o.text %}<p class="option__text">{{ o.text }}</p>{% endif %}
+  {% if o.button %}{{ button(o.button, root, 'btn--primary btn--sm' if loop.first else 'btn--outline btn--sm') }}{% endif %}
+</div>
+{% endfor %}
+{%- endmacro %}
+
+{# Una secció de pàgina. Tipus: text, cards, pillars, list, steps, anchor, team, booking, contact, note, quote, cta, faq, video, articles (vegeu el README). #}
 {% macro section(s, root) -%}
-{% set band = s.band or 'white' %}
-{% set wide = s.type in ('cards', 'video', 'team', 'steps', 'contact') or (s.type == 'text' and s.image) or (s.type == 'list' and band == 'dark') %}
+{% set band = s.band or 'cream' %}
+{% set wide = s.type in ('cards', 'pillars', 'video', 'team', 'steps', 'contact', 'booking', 'anchor', 'articles', 'instagram') or (s.type == 'text' and s.image) %}
 <section class="band band--{{ band }} band--{{ s.type }}" id="{{ s.id }}"{% if s.title %} aria-labelledby="h-{{ s.id }}"{% endif %}>
   <div class="wrap{% if not wide %} wrap--narrow{% endif %}">
+  {% if s.panel %}<div class="panel reveal">{% endif %}
 
-
-    {% set split = s.type == 'text' and s.image %}
+    {% set split = (s.type == 'text' and s.image) or s.type in ('anchor', 'booking') %}
     {% if (s.title or s.kicker or s.intro) and not split %}
-    <div class="band__head reveal">
+    <div class="band__head{% if not s.panel %} reveal{% endif %}">
       {% if s.kicker %}<p class="band__kicker">{{ s.kicker|cap }}</p>{% endif %}
       {% if s.title and s.type not in ('note', 'quote') %}<h2 class="band__title" id="h-{{ s.id }}">{{ s.title }}</h2>{% endif %}
       {% if s.intro %}<p class="band__intro">{{ s.intro }}</p>{% endif %}
@@ -120,33 +125,74 @@
             {% if b.list %}<ul class="ticks">{% for i in b.list %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
           {% endfor %}
           {% for p in s.after or [] %}<p>{{ p }}</p>{% endfor %}
+          {% if s.buttons and split %}<p class="actions actions--left">{% for b in s.buttons %}{{ button(b, root, 'btn--primary' if loop.first else 'btn--outline') }}{% endfor %}</p>{% endif %}
         </div>
         {% if s.image %}<div class="prose__media reveal">{{ img(s.image, s.alt or '', s.ratio or '43') }}</div>{% endif %}
       </div>
     {% elif s.type == 'cards' %}
       {% if s.before %}<div class="prose prose--before">{% for p in s.before %}<p>{{ p }}</p>{% endfor %}</div>{% endif %}
       {{ cards(s, root) }}
+    {% elif s.type == 'pillars' %}
+      <ul class="pillars">
+        {% for c in s["items"] %}<li class="pillar"><span class="pillar__icon" aria-hidden="true">{{ icon(c.icon or 'leaf') }}</span><h3 class="pillar__title">{{ c.title }}</h3><p>{{ c.text }}</p></li>{% endfor %}
+      </ul>
     {% elif s.type == 'list' %}
-      {% if band == 'dark' %}
-      <div class="benefits">
-        <ul class="benefits__list reveal">{% for i in s["items"] %}<li><span class="benefits__chk">{{ icon('check') }}</span><span>{{ i }}</span></li>{% endfor %}</ul>
-        {% if s.image %}<div class="benefits__media reveal">{{ img(s.image, s.alt or '', s.ratio or 'wide') }}</div>{% endif %}
-      </div>
-      {% else %}
       <ul class="tiles{% if s['items']|length >= 4 %} tiles--2{% endif %}">
         {% for i in s["items"] %}<li class="tile reveal"><span class="tile__i" aria-hidden="true">{{ icon(s.list_icon or 'check') }}</span><span>{{ i }}</span></li>{% endfor %}
       </ul>
-      {% endif %}
       {% for p in s.after or [] %}<p class="after">{{ p }}</p>{% endfor %}
     {% elif s.type == 'steps' %}
       <ol class="steps">
-        {% for st in s["items"] %}<li class="step reveal"><span class="step__n" aria-hidden="true">{{ st.n if st.n is defined else loop.index }}</span><h3 class="step__title">{{ st.title }}</h3>{% if st.lead %}<p class="step__lead">{{ st.lead }}</p>{% endif %}{% for p in st.paragraphs or [] %}<p>{{ p }}</p>{% endfor %}{% if st.text %}<p>{{ st.text }}</p>{% endif %}</li>{% endfor %}
+        {% for st in s["items"] %}<li class="step reveal"><span class="step__n" aria-hidden="true">{{ st.n if st.n is defined else loop.index }}</span><h3 class="step__title">{{ st.title }}</h3>{% for p in st.paragraphs or [] %}<p>{{ p }}</p>{% endfor %}{% if st.text %}<p>{{ st.text }}</p>{% endif %}</li>{% endfor %}
       </ol>
+    {% elif s.type == 'anchor' %}
+      {# L'exercici d'ancoratge: un cercle que s'obre i es tanca a poc a poc quan la persona ho tria (src/site.js) #}
+      <div class="anchor">
+        <div class="anchor__text reveal">
+          <div class="band__head band__head--left">{% if s.kicker %}<p class="band__kicker">{{ s.kicker|cap }}</p>{% endif %}<h2 class="band__title" id="h-{{ s.id }}">{{ s.title }}</h2></div>
+          {% for p in s.paragraphs or [] %}<p>{{ p }}</p>{% endfor %}
+          {% if s.list %}<ul class="anchor__steps">{% for i in s.list %}<li>{{ icon('check') }}<span>{{ i }}</span></li>{% endfor %}</ul>{% endif %}
+          {% if s.note %}<p class="anchor__note">{{ s.note }}</p>{% endif %}
+        </div>
+        <div class="anchor__box reveal" data-anchor data-phases="{{ (s.phases or ['Se abre…', 'Se cierra…'])|join('|') }}" data-seconds="{{ s.seconds or 5 }}">
+          <span class="anchor__circle" aria-hidden="true"></span>
+          <p class="anchor__label" aria-live="polite" data-idle="{{ s.idle or 'Cuando quieras' }}">{{ s.idle or 'Cuando quieras' }}</p>
+          <button class="btn btn--primary anchor__btn" type="button" data-start="{{ s.start or 'Empezar' }}" data-stop="{{ s.stop or 'Parar' }}">{{ s.start or 'Empezar' }}</button>
+        </div>
+      </div>
+    {% elif s.type == 'booking' %}
+      {# El bloc fosc per demanar una sessió: text i contacte a l'esquerra; les opcions de site.booking a la dreta #}
+      {% set bk = site.booking %}
+      <div class="booking reveal">
+        <div class="booking__text">
+          <h2 class="booking__title" id="h-{{ s.id }}">{{ s.title or bk.title }}</h2>
+          {% for p in s.paragraphs or bk.paragraphs %}<p>{{ p }}</p>{% endfor %}
+          <ul class="booking__lines">
+            <li>{{ icon('mail') }}<a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
+            <li>{{ icon('globe') }}<span>{{ site.contact.online }}</span></li>
+            <li>{{ icon('instagram') }}<a href="{{ site.contact.instagram }}" rel="noopener">{{ site.contact.instagram_name }}</a></li>
+          </ul>
+        </div>
+        <div class="booking__card">{{ options(s.get('items') or bk.options, root) }}</div>
+      </div>
+    {% elif s.type == 'contact' %}
+      {% set list = s.get('items') or site.booking.options %}
+      <div class="contact">
+        {% for k in list %}
+        <div class="contact__card reveal">
+          <h3 class="contact__h">{{ icon(k.icon or 'mail') }}<span>{{ k.title }}</span></h3>
+          {% if k.meta %}<p><strong>{{ k.meta }}</strong></p>{% endif %}
+          {% if k.text %}<p>{{ k.text }}</p>{% endif %}
+          {% for p in k.paragraphs or [] %}<p>{{ p }}</p>{% endfor %}
+          {% if k.button %}<p class="actions actions--left">{{ button(k.button, root, 'btn--primary') }}</p>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
     {% elif s.type == 'faq' %}
       <div class="faqs">{% for q, a, qid in s["items"] %}{{ faq_item(q, a, qid) }}{% endfor %}</div>
     {% elif s.type == 'note' %}
       <aside class="note note--{{ s.style or 'info' }} reveal"{% if s.title %} aria-labelledby="h-{{ s.id }}"{% endif %}>
-        {% if s.title %}<h2 class="note__title" id="h-{{ s.id }}">{{ icon(s.icon or ('clock' if (s.style or 'info') == 'info' else 'lifebuoy')) }}<span>{{ s.title }}</span></h2>{% endif %}
+        {% if s.title %}<h2 class="note__title" id="h-{{ s.id }}">{{ icon(s.icon or ('info' if (s.style or 'info') == 'info' else 'lifebuoy')) }}<span>{{ s.title }}</span></h2>{% endif %}
         {% for p in s.paragraphs or [] %}<p>{{ p }}</p>{% endfor %}
         {% if s.list %}<ul class="ticks">{% for i in s.list %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
       </aside>
@@ -162,6 +208,12 @@
         {% for p in s.paragraphs or [] %}<p>{{ p }}</p>{% endfor %}
         {% if s.buttons %}<p class="actions">{% for b in s.buttons %}{{ button(b, root, 'btn--light' if loop.first else 'btn--ghost-light') }}{% endfor %}</p>{% endif %}
       </div>
+    {% elif s.type == 'instagram' %}
+      {# Els carrussels d'Instagram, automàtics amb Behold quan hi ha "feed_id" a data/site.json ("instagram"). Si no, només el botó. #}
+      {% if site.instagram and site.instagram.feed_id %}
+      <div class="insta reveal"><behold-widget feed-id="{{ site.instagram.feed_id }}"></behold-widget></div>
+      <script>(()=>{const d=document,s=d.createElement("script");s.type="module";s.src="https://w.behold.so/widget.js";d.head.append(s);})();</script>
+      {% endif %}
     {% elif s.type == 'articles' %}
       {% if articles %}{{ article_cards(articles, root) }}{% else %}<p class="band__intro">Pronto encontrarás aquí los primeros artículos.</p>{% endif %}
     {% elif s.type == 'video' %}
@@ -176,7 +228,7 @@
         {% endfor %}
       </ul>
     {% elif s.type == 'team' %}
-      <ul class="team{% if s['items']|length == 2 %} team--2{% endif %}">
+      <ul class="team{% if s['items']|length <= 2 %} team--{{ s['items']|length }}{% endif %}">
         {% for m in s["items"] %}
         <li class="member reveal" id="{{ m.id or (m.name|lower|replace(' ', '-')) }}">
           {{ img(m.photo, m.name, 'sq', 'member__photo') }}
@@ -193,21 +245,10 @@
         </li>
         {% endfor %}
       </ul>
-    {% elif s.type == 'contact' %}
-      {# Com demanar una sessió: el correu, l'Instagram i, si n'hi ha, el calendari de reserves (data/site.json, "contact" i "booking") #}
-      {% set c = site.contact %}
-      <div class="contact">
-        {% for k in s["items"] or [] %}
-        <div class="contact__card reveal">
-          <h3 class="contact__h">{{ icon(k.icon or 'mail') }}<span>{{ k.title }}</span></h3>
-          {% for p in k.paragraphs or [] %}<p>{{ p }}</p>{% endfor %}
-          {% if k.buttons %}<p class="actions actions--left">{% for b in k.buttons %}{{ button(b, root, 'btn--primary' if loop.first else 'btn--outline') }}{% endfor %}</p>{% endif %}
-        </div>
-        {% endfor %}
-      </div>
     {% endif %}
 
-    {% if s.buttons and s.type != 'cta' %}<p class="actions">{% for b in s.buttons %}{{ button(b, root, 'btn--primary' if loop.first else 'btn--outline') }}{% endfor %}</p>{% endif %}
+    {% if s.buttons and s.type != 'cta' and not split %}<p class="actions">{% for b in s.buttons %}{{ button(b, root, 'btn--primary' if loop.first else 'btn--outline') }}{% endfor %}</p>{% endif %}
+  {% if s.panel %}</div>{% endif %}
   </div>
 </section>
 {%- endmacro %}

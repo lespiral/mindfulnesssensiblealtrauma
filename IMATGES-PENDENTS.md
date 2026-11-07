@@ -5,10 +5,7 @@ a `src/img/fotos/` amb el nom de la primera columna i torna a generar la web (`p
 
 | Fitxer | On surt |
 |---|---|
-| `01-inicio.jpg` | / |
-| `02-cuando-meditar-no-calma.jpg` | / |
-| `03-mindfulness.jpg` | /, /mindfulness-sensible-al-trauma/ |
-| `04-yoga.jpg` | /, /yoga-sensible-al-trauma/ |
-| `05-psicoterapia.jpg` | /, /psicoterapia/ |
-| `aleix-boronat.jpg` | /, /mindfulness-sensible-al-trauma/, /psicoterapia/, /quienes-somos/ |
-| `anna-vinas.jpg` | /, /psicoterapia/, /quienes-somos/, /yoga-sensible-al-trauma/ |
+| `01-cuando-meditar-no-calma.jpg` | / |
+| `02-mindfulness.jpg` | /mindfulness-sensible-al-trauma/ |
+| `03-yoga.jpg` | /yoga-sensible-al-trauma/ |
+| `04-psicoterapia.jpg` | /psicoterapia/ |

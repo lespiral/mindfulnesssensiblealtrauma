@@ -32,6 +32,35 @@
     Array.prototype.forEach.call(els, function (el) { io.observe(el); });
   }
 
+  // L'exercici d'ancoratge: el cercle s'obre i es tanca a poc a poc (data-seconds) només quan la persona prem «Empezar».
+  // No dona cap instrucció sobre la respiració: només acompanya la mirada. «Parar» el deixa quiet.
+  Array.prototype.forEach.call(document.querySelectorAll('[data-anchor]'), function (box) {
+    var circle = box.querySelector('.anchor__circle');
+    var label = box.querySelector('.anchor__label');
+    var btn = box.querySelector('.anchor__btn');
+    var phases = (box.getAttribute('data-phases') || '').split('|');
+    var ms = (parseFloat(box.getAttribute('data-seconds')) || 5) * 1000;
+    var timer = null, open = false;
+    function step() {
+      open = !open;
+      circle.classList.toggle('is-open', open);
+      label.textContent = open ? phases[0] : (phases[1] || phases[0]);
+    }
+    function stop() {
+      clearInterval(timer); timer = null; open = false;
+      circle.classList.remove('is-open');
+      label.textContent = label.getAttribute('data-idle');
+      btn.textContent = btn.getAttribute('data-start');
+    }
+    btn.addEventListener('click', function () {
+      if (timer) { stop(); return; }
+      btn.textContent = btn.getAttribute('data-stop');
+      step();
+      timer = setInterval(step, ms);
+    });
+    document.addEventListener('visibilitychange', function () { if (document.hidden && timer) stop(); });
+  });
+
   // Vídeos de YouTube: la imatge es canvia pel vídeo en clicar (la pàgina no carrega YouTube fins aleshores)
   Array.prototype.forEach.call(document.querySelectorAll('[data-yt]'), function (a) {
     a.addEventListener('click', function (e) {

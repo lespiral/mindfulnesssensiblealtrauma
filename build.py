@@ -29,8 +29,8 @@ IMG, FOTOS = SRC / "img", SRC / "img" / "fotos"
 ICONS = json.loads((SRC / "icons.json").read_text(encoding="utf-8"))
 
 # Tipus de secció que saben pintar les plantilles (src/templates/parts.html, macro «section»)
-SECTION_TYPES = {"text", "cards", "list", "faq", "note", "cta", "actions", "contact",
-                 "quote", "steps", "video", "team", "articles"}
+SECTION_TYPES = {"text", "cards", "pillars", "list", "faq", "note", "cta", "contact", "booking", "anchor",
+                 "quote", "steps", "video", "team", "articles", "instagram"}
 
 errors = []
 pending_imgs = {}     # fitxer → {"orig": ..., "pages": set()}
@@ -69,7 +69,7 @@ def pic(path):
 
 
 BOLD = re.compile(r"\*\*(.+?)\*\*")
-KEEP = ("id", "href", "icon", "type", "band", "image", "photo", "youtube", "map", "style", "align", "layout", "list_icon", "cols")
+KEEP = ("id", "href", "icon", "type", "band", "image", "photo", "youtube", "map", "style", "align", "layout", "list_icon", "cols", "panel", "phases", "seconds", "start", "stop", "idle", "button")
 
 
 def bold(v):
@@ -113,7 +113,7 @@ def prepare_sections(sections, where):
                     s[k] = htmlify(s[k])
         if t == "faq":
             s["items"] = [(q, Markup(a), slugify(q)) for q, a in s.get("items", [])]
-        for it in s.get("items", []) if t in ("cards", "team", "steps") else []:
+        for it in s.get("items", []) if t in ("cards", "pillars", "team", "steps", "contact", "booking") else []:
             if isinstance(it, dict) and it.get("icon") and it["icon"] not in ICONS:
                 errors.append(f"{where}: la icona {it['icon']!r} no és a src/icons.json")
         for k in list(s):

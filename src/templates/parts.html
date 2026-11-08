@@ -168,7 +168,7 @@
           <h2 class="booking__title" id="h-{{ s.id }}">{{ s.title or bk.title }}</h2>
           {% for p in s.paragraphs or bk.paragraphs %}<p>{{ p }}</p>{% endfor %}
           <ul class="booking__lines">
-            <li>{{ icon('mail') }}<a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
+            <li>{{ icon('mail') }}<a href="mailto:{{ site.contact.email }}">{{ site.contact.email.split('@')[0] }}<wbr>@{{ site.contact.email.split('@')[1] }}</a></li>
             <li>{{ icon('globe') }}<span>{{ site.contact.online }}</span></li>
             <li>{{ icon('instagram') }}<a href="{{ site.contact.instagram }}" rel="noopener">{{ site.contact.instagram_name }}</a></li>
           </ul>

@@ -301,6 +301,8 @@ main{padding-top:var(--topbar)}
 .booking__lines .i{width:22px;height:22px;color:var(--s300);margin-top:2px}
 .booking__lines a{color:#fff;text-decoration:none}
 .booking__lines a:hover{text-decoration:underline}
+/* Al mòbil, el correu es parteix davant de l'@ (<wbr>) i l'@ d'Instagram cap sencer en una línia */
+@media (max-width:420px){.booking__lines{font-size:15px}.booking__lines li{gap:12px}.booking__lines a,.footer__contact a{overflow-wrap:normal;word-break:normal}}
 .booking__card{background:var(--paper);color:var(--text);border-radius:var(--r-lg);padding:30px;box-shadow:0 10px 30px rgba(0,0,0,.18);display:grid;gap:4px;align-content:start}
 .option{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;padding:18px 0;border-bottom:1px solid var(--cream-2)}
 .option:first-child{padding-top:0}

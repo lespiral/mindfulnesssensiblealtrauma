@@ -73,7 +73,7 @@
       <div class="footer__col">
         <p class="footer__h">Contacto</p>
         <ul class="footer__contact">
-          <li>{{ icon('mail') }}<a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
+          <li>{{ icon('mail') }}<a href="mailto:{{ site.contact.email }}">{{ site.contact.email.split('@')[0] }}<wbr>@{{ site.contact.email.split('@')[1] }}</a></li>
           <li>{{ icon('instagram') }}<a href="{{ site.contact.instagram }}" rel="noopener">{{ site.contact.instagram_name }}</a></li>
           <li>{{ icon('globe') }}<span>{{ site.contact.online }}</span></li>
         </ul>

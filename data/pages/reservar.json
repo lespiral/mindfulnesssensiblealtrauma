@@ -31,6 +31,46 @@
       ]
     },
     {
+      "type": "text",
+      "band": "cream",
+      "id": "sesion-online",
+      "kicker": "Cómo es",
+      "title": "Una sesión online",
+      "paragraphs": [
+        "Hacemos las sesiones por videollamada, con Google Meet. Si prefieres otra plataforma, dínoslo y lo hablamos.",
+        "Unos días antes te enviaremos por correo el enlace y los detalles. Para conectarte solo necesitas un dispositivo con cámara y micrófono y una conexión estable.",
+        "Como no estaremos en la misma sala, nos ayuda que el lugar desde el que te conectas cumpla algunas condiciones. Son una invitación, no un examen: si algo no es posible, lo vemos juntos."
+      ]
+    },
+    {
+      "type": "pillars",
+      "band": "cream",
+      "id": "condiciones",
+      "title": "El espacio desde el que te conectas",
+      "items": [
+        {
+          "icon": "house",
+          "title": "Un lugar tranquilo",
+          "text": "Con pocas interrupciones y donde puedas estar a gusto durante toda la sesión."
+        },
+        {
+          "icon": "seal-check",
+          "title": "Privado",
+          "text": "Que nadie pueda oír ni entrar mientras dura la sesión. Unos auriculares pueden ayudar."
+        },
+        {
+          "icon": "flower-lotus",
+          "title": "Con espacio suficiente",
+          "text": "En el caso del yoga, el espacio suficiente para moverte con comodidad y una esterilla o una manta."
+        },
+        {
+          "icon": "phone",
+          "title": "Alguien cerca, si lo deseas",
+          "text": "Una persona de confianza que esté cerca y cuyo teléfono tengamos, por si necesitáramos pedir ayuda. No hace falta que sepa de qué hablamos."
+        }
+      ]
+    },
+    {
       "type": "note",
       "style": "care",
       "title": "No somos un servicio de urgencias",

@@ -1,0 +1,25 @@
+{
+  "seo_title": "Política de cookies",
+  "description": "Esta web no utiliza cookies ni tecnologías similares que debas aceptar.",
+  "kicker": "Información legal",
+  "title": "Política de cookies",
+  "lead": "Esta web no utiliza cookies ni tecnologías similares que debas aceptar.",
+  "sections": [
+    {
+      "type": "text",
+      "band": "cream",
+      "html": true,
+      "id": "texto",
+      "blocks": [
+        {
+          "h": "Cookies",
+          "paragraphs": [
+            "Esta web no utiliza cookies ni tecnologías similares que debas aceptar. Tampoco carga servicios de otras empresas: los tipos de letra se sirven desde la propia web.",
+            "Si algún día utilizamos cookies de análisis, mapas, vídeos u otros servicios, lo indicaremos aquí y te pediremos el consentimiento antes de activarlos.",
+            "Si tienes dudas, escríbenos a <a href=\"mailto:lespiral.cat@gmail.com\">lespiral.cat@gmail.com</a>."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "seo_title": "Aviso legal",
+  "description": "Datos del titular de la web mindfulnesssensiblealtrauma.com y condiciones de uso.",
+  "kicker": "Información legal",
+  "title": "Aviso legal",
+  "lead": "Datos del titular de la web mindfulnesssensiblealtrauma.com y condiciones de uso.",
+  "sections": [
+    {
+      "type": "text",
+      "band": "cream",
+      "html": true,
+      "id": "texto",
+      "blocks": [
+        {
+          "h": "Datos del titular",
+          "paragraphs": [
+            "En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), estos son los datos identificativos del titular de la web:"
+          ],
+          "list": [
+            "**Titular:** Aleix Boronat Monfort",
+            "**NIF:** 46789790Q",
+            "**Dirección:** C/ Jaume Casanovas 177, local 2, 08820 El Prat de Llobregat (Barcelona)",
+            "**Correo electrónico:** <a href=\"mailto:lespiral.cat@gmail.com\">lespiral.cat@gmail.com</a>",
+            "**Sitio web:** mindfulnesssensiblealtrauma.com"
+          ]
+        },
+        {
+          "h": "Finalidad de la web",
+          "paragraphs": [
+            "Dar a conocer las sesiones individuales online de mindfulness, yoga y psicoterapia humanista sensibles al trauma, y facilitar que puedas pedir una sesión."
+          ]
+        },
+        {
+          "h": "Legislación",
+          "paragraphs": [
+            "Las relaciones entre el titular y las personas que usan los servicios de esta web se rigen por la legislación y la jurisdicción españolas."
+          ]
+        },
+        {
+          "h": "Uso y acceso",
+          "paragraphs": [
+            "Quien usa la web queda informado y acepta que acceder a ella no supone, en modo alguno, el inicio de una relación comercial con el titular."
+          ]
+        },
+        {
+          "h": "Propiedad intelectual e industrial",
+          "paragraphs": [
+            "Los derechos de propiedad intelectual del contenido de la web, de su diseño gráfico y de sus códigos son del titular. Queda prohibido reproducirlos, distribuirlos, comunicarlos públicamente o transformarlos, incluso citando la fuente, salvo consentimiento por escrito del titular."
+          ]
+        },
+        {
+          "h": "Contenido de la web y enlaces",
+          "paragraphs": [
+            "El titular se reserva el derecho de actualizar, modificar o eliminar la información de la web, e incluso de limitar o no permitir el acceso a ella.",
+            "El titular no asume responsabilidad por la información de páginas web de terceros a las que se pueda llegar mediante enlaces desde esta web. Los enlaces tienen una finalidad meramente informativa y en ningún caso suponen sugerencia, invitación o recomendación."
+          ]
+        },
+        {
+          "h": "Protección de datos",
+          "paragraphs": [
+            "Cómo tratamos tus datos está explicado en la <a href=\"../politica-de-privacidad/\">política de privacidad</a>. Sobre cookies, en la <a href=\"../politica-de-cookies/\">política de cookies</a>."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -45,6 +45,12 @@
       "Escríbenos y acordamos el día y la hora.",
       "Te enviaremos por correo todos los detalles para la primera sesión."
     ],
+    "privacy": {
+      "before": "Usaremos tus datos solo para responderte. Más información en la ",
+      "link": "política de privacidad",
+      "slug": "politica-de-privacidad",
+      "after": "."
+    },
     "options": [
       {
         "icon": "chat-circle-dots",
@@ -123,15 +129,15 @@
     "legal": [
       {
         "title": "Aviso legal",
-        "href": "https://lespiral.cat/aviso-legal/"
+        "slug": "aviso-legal"
       },
       {
         "title": "Política de privacidad",
-        "href": "https://lespiral.cat/politica-de-privacidad/"
+        "slug": "politica-de-privacidad"
       },
       {
         "title": "Política de cookies",
-        "href": "https://lespiral.cat/politica-de-cookies/"
+        "slug": "politica-de-cookies"
       }
     ]
   },

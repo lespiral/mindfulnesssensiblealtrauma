@@ -81,6 +81,8 @@
 </ul>
 {%- endmacro %}
 
+{% macro privacy_line(root) -%}{% set pv = site.booking.privacy %}{% if pv %}<p class="option__privacy">{{ pv.before }}<a href="{{ root }}{{ pv.slug }}/">{{ pv.link }}</a>{{ pv.after }}</p>{% endif %}{%- endmacro %}
+
 {# Les maneres de demanar una sessió (data/site.json, "booking.options"): una sola font per als preus #}
 {% macro options(list, root) -%}
 {% for o in list %}
@@ -89,7 +91,7 @@
   <h3 class="option__title">{{ o.title }}</h3>
   {% if o.meta %}<p class="option__meta">{{ o.meta }}</p>{% endif %}
   {% if o.text %}<p class="option__text">{{ o.text }}</p>{% endif %}
-  {% if o.button %}{{ button(o.button, root, 'btn--primary btn--sm' if loop.first else 'btn--outline btn--sm') }}{% endif %}
+  {% if o.button %}{{ button(o.button, root, 'btn--primary btn--sm' if loop.first else 'btn--outline btn--sm') }}{{ privacy_line(root) }}{% endif %}
 </div>
 {% endfor %}
 {%- endmacro %}
@@ -184,7 +186,7 @@
           {% if k.meta %}<p><strong>{{ k.meta }}</strong></p>{% endif %}
           {% if k.text %}<p>{{ k.text }}</p>{% endif %}
           {% for p in k.paragraphs or [] %}<p>{{ p }}</p>{% endfor %}
-          {% if k.button %}<p class="actions actions--left">{{ button(k.button, root, 'btn--primary') }}</p>{% endif %}
+          {% if k.button %}<p class="actions actions--left">{{ button(k.button, root, 'btn--primary') }}</p>{{ privacy_line(root) }}{% endif %}
         </div>
         {% endfor %}
       </div>

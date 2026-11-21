@@ -281,6 +281,8 @@ shutil.copy(SRC / "site.css", OUT / "assets" / "site.css")
 shutil.copy(SRC / "site.js", OUT / "assets" / "site.js")
 if IMG.exists():
     shutil.copytree(IMG, OUT / "assets" / "img")
+if (SRC / "fonts").exists():
+    shutil.copytree(SRC / "fonts", OUT / "assets" / "fonts")
 (OUT / ".nojekyll").write_text("")
 if NOINDEX:
     (OUT / "robots.txt").write_text("User-agent: *\nDisallow: /\n")

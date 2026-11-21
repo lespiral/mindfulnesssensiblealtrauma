@@ -3,6 +3,17 @@
    targetes blanques i botons arrodonits) amb l'estructura d'espiralosona.com i el blau petroli del logo
    per als blocs foscos. To serè: molt d'aire, moviment lent i res que cridi. */
 
+/* Tipus de lletra (Inter i Lora, llicència OFL) servits des d'aquesta mateixa web: no es carrega res de Google */
+@font-face{font-family:Inter;font-style:normal;font-weight:300;font-display:swap;src:url(fonts/inter-300.woff) format("woff")}
+@font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-400.woff) format("woff")}
+@font-face{font-family:Inter;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/inter-500.woff) format("woff")}
+@font-face{font-family:Inter;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/inter-600.woff) format("woff")}
+@font-face{font-family:Lora;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/lora-400.woff) format("woff")}
+@font-face{font-family:Lora;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/lora-500.woff) format("woff")}
+@font-face{font-family:Lora;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/lora-600.woff) format("woff")}
+@font-face{font-family:Lora;font-style:italic;font-weight:400;font-display:swap;src:url(fonts/lora-italic-400.woff) format("woff")}
+@font-face{font-family:Lora;font-style:italic;font-weight:500;font-display:swap;src:url(fonts/lora-italic-500.woff) format("woff")}
+
 :root{
   /* Verd sàlvia (maqueta i logo) */
   --s50:#f6f7f6; --s100:#e8ebe9; --s200:#d3dcd5; --s300:#b2c4b6; --s400:#8ba491; --s500:#698770;

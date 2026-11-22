@@ -30,23 +30,22 @@
         {
           "h": "Quién es el responsable de tus datos",
           "paragraphs": [
-            "Aleix Boronat Monfort, con NIF 46789790Q y domicilio en C/ Jaume Casanovas 177, local 2, 08820 El Prat de Llobregat (Barcelona). Correo electrónico: <a href=\"mailto:lespiral.cat@gmail.com\">lespiral.cat@gmail.com</a>.",
-            "[Por confirmar: Anna Viñas: si debe figurar como responsable de las sesiones que ella realiza. Punto pendiente con Aleix y Anna; no publicar hasta resolverlo y, si es que sí, cambiar este apartado]"
+            "Aleix Boronat Monfort, con NIF 46789790Q y domicilio en C/ Jaume Casanovas 177, local 2, 08820 El Prat de Llobregat (Barcelona). Correo electrónico: <a href=\"mailto:lespiral.cat@gmail.com\">lespiral.cat@gmail.com</a>."
           ]
         },
         {
           "h": "Qué datos recogemos",
           "list": [
-            "**Al visitar la web:** el servidor que la aloja recibe tu dirección IP y datos técnicos del navegador para poder mostrar la página. No los usamos para identificarte. La web está alojada en GitHub Pages (GitHub, Inc., Estados Unidos). [Por confirmar: revisar este apartado y las garantías para la transferencia fuera de la UE]",
+            "**Al visitar la web:** el servidor que la aloja recibe tu dirección IP y datos técnicos del navegador para poder mostrar la página. No los usamos para identificarte. La web está alojada en GitHub Pages (GitHub, Inc., Estados Unidos).",
             "**Al escribirnos:** tu nombre, tu correo y lo que quieras contarnos. No hace falta que nos cuentes tu historia ni nada sobre tu salud.",
-            "**Si haces sesiones:** tu nombre, tu correo, el día y la hora de las sesiones y los datos necesarios para la factura. [Por confirmar: si se toman notas o se guarda algún registro de las sesiones. Si es así, este apartado cambia y hay que consultar a la abogada] [Por confirmar: forma de pago y datos que se guardan para cobrar]"
+            "**Si haces sesiones:** tu nombre, tu correo, el día y la hora de las sesiones y los datos necesarios para la factura. Si pagas por transferencia, tu banco nos facilita los datos de la transferencia (nombre de quien paga y cuenta de origen). No tomamos notas ni guardamos ningún registro de lo que hablamos en las sesiones."
           ]
         },
         {
           "h": "Para qué los usamos y por qué podemos hacerlo",
           "list": [
             "Responder tu consulta, orientarte y acordar las sesiones: porque nos lo pides (artículo 6.1.b del Reglamento general de protección de datos, RGPD).",
-            "Realizar las sesiones por videollamada con [Por confirmar: herramienta de videollamada; en /reservar/ se dice Google Meet]: porque es la forma de prestarte el servicio (artículo 6.1.b RGPD).",
+            "Realizar las sesiones por videollamada con Google Meet (o con otra plataforma, si nos lo pides): porque es la forma de prestarte el servicio (artículo 6.1.b RGPD).",
             "Hacer facturas y guardarlas: porque la ley nos obliga (artículo 6.1.c RGPD)."
           ],
           "paragraphs": [
@@ -56,7 +55,7 @@
         {
           "h": "Quién más accede a tus datos",
           "paragraphs": [
-            "Solo las empresas de los servicios que usamos, para prestarnos el servicio: Google (correo), [Por confirmar: herramienta de videollamada], Instagram (Meta), GitHub (alojamiento de la web) y [Por confirmar: si hay gestoría que lleve la contabilidad]. No los vendemos ni los cedemos a nadie para otras finalidades. Algunos de estos servicios pueden tratar datos fuera de la Unión Europea, con las garantías que exige el RGPD. [Por confirmar: para cada servicio]"
+            "Solo las empresas de los servicios que usamos, para prestarnos el servicio: Google (correo y videollamadas con Google Meet), GitHub (alojamiento de la web) y el banco con el que cobramos. No los vendemos ni los cedemos a nadie para otras finalidades. Algunos de estos servicios pueden tratar datos fuera de la Unión Europea, por ejemplo en Estados Unidos; sus políticas de privacidad explican las garantías que aplican."
           ]
         },
         {
@@ -64,19 +63,13 @@
           "list": [
             "Consultas que no acaban en sesión: el tiempo de responderlas y, como máximo, un año. [Por confirmar: plazo, con la abogada]",
             "Personas que hacen sesiones: mientras haya relación y hasta dos años después de la última sesión. [Por confirmar: plazo, con la abogada]",
-            "Facturas: seis años, como exige la ley. [Por confirmar: con la gestoría]"
+            "Facturas: seis años, como exige la ley."
           ]
         },
         {
           "h": "Tus derechos",
           "paragraphs": [
             "Puedes pedirnos en cualquier momento ver tus datos, corregirlos, borrarlos, limitar su uso u oponerte a él, recibirlos en un formato portable y retirar el consentimiento que nos hayas dado. Escríbenos a <a href=\"mailto:lespiral.cat@gmail.com\">lespiral.cat@gmail.com</a> y te responderemos en un máximo de un mes. Solo te pediremos un documento de identidad si tenemos dudas razonables de que la petición sea tuya. Si crees que no hemos tratado bien tus datos, puedes reclamar ante la Agencia Española de Protección de Datos (<a href=\"https://www.aepd.es\" rel=\"noopener\">www.aepd.es</a>)."
-          ]
-        },
-        {
-          "h": "Instagram",
-          "paragraphs": [
-            "[Por confirmar: si esta política debe cubrir también la cuenta de Instagram del proyecto. En la web solo hay un enlace a Instagram, sin contenido incrustado]"
           ]
         },
         {
